@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.nav{
+    background-image: url(baground.jpg);
+    background-size: cover;
+    height: 1000px;
+    align-items: center;
+    display: flex;
+    
+}
+
+.looding{
+    background-image: url(Group\ 7.png);
+    background-size: cover;
+    height: 500px;
+    width: 1000px;
+    margin-top: 150px;
+    margin-left: 500px;
+}
