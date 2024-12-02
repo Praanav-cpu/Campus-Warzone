@@ -26,9 +26,10 @@ body {
   }
 }
 
-/* Loader */
+ 
+ 
 /* #loader {
-  transition: all 0.4s ease-in;
+  transition: all 4s ease-in;
   opacity: 1;
   display: flex;
   justify-content: center;
@@ -117,41 +118,75 @@ body {
   height: auto;
 }
 
-.plane{
+.plane {
   position: absolute;
   padding-top: 250px;
-  left: 260px;
+  left: -200px;  
   z-index: 1000;
+  animation: slideInFromLeft 4s forwards;  
 }
 
-.plane img{
+.plane img {
   max-width: 160px;
   height: auto;
 }
- .parashut{
+
+@keyframes slideInFromLeft {
+  0% {
+    left: -200px;  
+  }
+  100% {
+    left: 260px;  
+  }
+}
+
+.parashut {
   position: absolute;
-  padding-top: 220px;
+  top: -150px; /* Start from above the screen */
   right: 180px;
   z-index: 1000;
+  animation: slideDown 4s forwards; /* Animation for sliding */
+}
 
- }
-
- .parashut img{
-  max-width: 80px;
+.parashut img {
+  max-width: 110px;
   height: auto;
- }
+}
 
- .girl{
+@keyframes slideDown {
+  0% {
+    top: -150px; /* Start position (off-screen at the top) */
+  }
+  100% {
+    top: 180px; /* Final position (original position) */
+  }
+}
+
+
+
+
+.girl {
   position: absolute;
-  padding-top: 560px;
-  left: 40px;
+  left: -200px; 
+  top: 500px;
   z-index: 1000;
- }
+  animation: slideInLeft 2s forwards;  
+}
 
- .girl img{
+.girl img {
   max-width: 160px;
   height: auto;
- }
+}
+
+@keyframes slideInLeft {
+  0% {
+    left: -200px; /* Start position (off-screen on the left) */
+  }
+  100% {
+    left: 70px; /* Final position (original position) */
+  }
+}
+
 /* Navbar Styles */
 .navbar {
   position: fixed;
@@ -164,16 +199,20 @@ body {
   padding: 10px 20px;
   z-index: 1000;
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* Keeps space between navbar items */
+  align-items: center;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.8);
   border-radius: 8px;
 }
 
+ 
 .navbar ul {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
+  justify-content: center;  
+  flex-grow: 1;  
 }
 
 .navbar li {
@@ -194,6 +233,60 @@ body {
   color: #ff9800;
   text-shadow: 0 0 8px #ff9800;
 }
+
+/* Mute/Unmute Button */
+.mute-button {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 16px;
+  font-family: 'Oxanium', sans-serif;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  margin-left: 20px;  
+}
+
+.mute-button:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #ff9800;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+  .navbar {
+    width: 90%; /* Make navbar take up more space on smaller screens */
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+    padding: 15px;
+  }
+
+  .navbar ul {
+    flex-direction: column;  
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .navbar li {
+    margin: 10px 0; 
+  }
+
+  .mute-button {
+    width: 100%; 
+    margin-left: 0;  
+    margin-top: 15px;  
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar a {
+    font-size: 16px;  
+  }
+}
+
 
 /* Heading */
 .heading {
@@ -226,7 +319,7 @@ body {
 }
 
 .slogan{
-  margin-top: 35px;
+  margin-top: 25px;
     
   font-family: 'Oxanium', sans-serif;
   color: white;
@@ -236,18 +329,30 @@ body {
 
 .IMG2 {
   display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically */
-  height: 60vh; /* Occupies 60% of the viewport height */
-  margin-top: -50px; /* Moves the logo upward */
+  justify-content: center;  
+  align-items: center;  
+  height: 60vh;  
+  margin-top: 60px; 
 }
 
 .IMG2 img {
-  max-width: 50%; /* Default size for larger screens */
-  height: auto; /* Maintains aspect ratio */
-  transition: all 0.3s ease-in-out; /* Smooth resizing effect */
+  max-width: 60%;  
+  height: auto;  
+  transition: all 0.6s ease-in-out;  
   padding-left: 60px;
+  animation: zoomIn 2s ease-out forwards;  
 }
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.5); 
+  }
+  100% {
+    transform: scale(1);  
+  }
+}
+
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -319,3 +424,144 @@ body {
     font-size: 16px;
   }
 }
+
+/* New About Section Styling */
+/* Apply Background Image to Whole Page */
+body {
+  background-image: url('Desktop - 2.png'); /* Replace with your background image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'Work Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* New Section Styling */
+/* Body Styling */
+body {
+  background-image: url('Desktop - 2.png'); /* Replace with your background image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'Work Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Ensures body occupies full viewport height */
+  overflow: auto; /* Ensures scrollbars appear if content overflows */
+}
+
+/* Optionally, add a custom scrollbar style */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the scrollbar handle */
+  border-radius: 6px; /* Round the edges of the scrollbar handle */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Hover effect for the scrollbar handle */
+}
+
+
+
+
+/* About Section */
+ 
+.about  {
+  position: absolute;
+  padding-top: 30px;
+  left: -300px;
+  z-index: 1000;
+  animation: slideInFromLeft 2s forwards;  
+}
+
+.about   img {
+  max-width: 280px;
+  height: 320px;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    left: -200px;  
+  }
+  100% {
+    left: 300px;  
+  }
+}
+
+ 
+/* Style for the paragraph container */
+.para {
+  font-size: 18px; /* Set font size */
+  font-family: 'Oxanium', sans-serif; /* Use Oxanium font */
+  line-height: 1.6; /* Make the text easier to read */
+  color: #ffffff; /* White text color */
+  max-width: 600px; /* Set maximum width for paragraph */
+  text-align: left; /* Align the text to the left */
+  padding: 20px; /* Padding inside the box */
+  border: 2px solid transparent; /* Transparent border initially */
+  border-radius: 10px; /* Rounded corners for the box */
+  background-color: rgba(0, 0, 0, 0.468); /* Semi-transparent background */
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5); /* Glow effect */
+  opacity: 0; /* Initially hidden */
+  animation: fadeInText 2s forwards; /* Animation to make text appear */
+  position: relative; /* Allow the box to be positioned normally */
+  max-width: 500px; /* Ensure the paragraph box doesn't exceed a max width */
+  margin-top: 100px; /* Add margin to shift the box lower */
+}
+
+/* Keyframe animation for appearing text */
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(50px); /* Start position */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End position */
+  }
+}
+
+/* Neon border effect */
+.para:hover {
+  border: 2px solid #ffffff; /* Apply white neon border on hover */
+  box-shadow: 0 0 15px 2px #ffffff; /* Neon glow effect */
+}
+
+.tournament-info {
+  text-align: center;
+  font-family: 'Oxanium', sans-serif;
+  color: #969419;
+  margin-top: 40px;
+}
+
+.vertical-line {
+  width: 2px; /* Line thickness */
+  height: 150px; /* Height of the line */
+  background-color: white; /* Line color */
+  margin: 20px auto; /* Margin to space the line */
+}
+
+.groups {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px; /* Space between the groups and the line */
+  margin-top: 40px;
+}
+
+.group {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.line {
+  width: 1px; /* Line thickness */
+  height: 50px; /* Height of the line */
+  background-color: white; /* Line color */
+}
+
+
