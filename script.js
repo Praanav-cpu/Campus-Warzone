@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Wait for a user interaction to play audio
     document.body.addEventListener("click", () => {
         backgroundMusic.play().catch(error => {
-            console.log("Autoplay error:", error);
+            console.log("Autoplay :", error);
         });
     }, { once: true });
 
