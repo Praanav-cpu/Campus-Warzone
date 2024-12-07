@@ -165,34 +165,7 @@ nav ul li a:hover {
   }
 
   
-.logo2 {
-  position: absolute;       
-  top: 0;                    
-  left: 0;                
-  z-index: 600;              
-}
-
  
-.logo2 img {
-  max-width: 220px;         
-  height: auto;             
-  display: block;           
-  margin: 10px;               
-}
-
- 
-@media (max-width: 768px) {
-  .logo2 img {
-    max-width: 30vw;        
-  }
-}
-
- 
-@media (max-width: 480px) {
-  .logo2 img {
-    max-width: 40vw;         
-  }
-}
 
 .logo3 {
   position: absolute;       
@@ -252,16 +225,23 @@ nav ul li a:hover {
 }
 
 /* plane  */
+@keyframes movePlane {
+  0% {
+    transform: translateX(-300px) translateY(-50%); /* Start far left */
+    opacity: 0; /* Initially invisible */
+  }
+  100% {
+    transform: translateX(220px) translateY(-50%); /* Move to original position */
+    opacity: 1; /* Fully visible */
+  }
+}
 
-/* Plane Styling */
-/* Plane Styling */
 .plane {
   position: absolute;
-  top: 50%;                      /* Center vertically */
-  left: -200px;                  /* Start off-screen to the left */
-  transform: translateY(-50%);   /* Adjust for vertical centering */
-  animation: moveToPosition 3s ease-out forwards; /* Animation to move to position */
+  top: 35%;
+  left: 220px; /* Start position, final position */
   z-index: 1000;
+  animation: movePlane 2s ease-out forwards; /* Animation applied */
 }
 
 .plane img {
@@ -269,28 +249,48 @@ nav ul li a:hover {
   height: auto;
 }
 
-/* Keyframes for moving the plane */
-@keyframes   {
-  0% {
-    left: -200px; /* Start off-screen to the left */
-  }
-  100% {
-    left: 220px; /* Move to its original position */
-  }
+ 
+
+.para {
+  position: absolute;  
+  top: 45%; 
+  right: 180px;  
+  transform: translateY(-50%);  
+  z-index: 1000;
+  animation: moveDown 1.5s ease-out forwards; 
 }
 
-/* Responsive Handling */
-@media (max-width: 768px) {
-  .plane {
-    width: 100%; /* Ensure the plane is within the viewport on smaller screens */
-  }
-  .plane img {
-    width: 100px; /* Adjust the plane size on smaller screens */
-  }
+.para img {
+  width: 140px;  
+  height: auto;  
 }
 
-  
+.pp{
+  position: absolute;
+  top: 15%;
+  left: 320px;
+  z-index: 1000;
+
 }
+ .pp img{
+  width: 80px ;
+  height: auto;
+ }
+
+ .ppp{
+  position: absolute;
+  top: 20%;
+  right: 280px;
+  z-index: 1000;
+ }
+
+ .ppp img{
+  width: 120px;
+ height: auto;
+}
+
+}
+
 
 
 #section2 {
