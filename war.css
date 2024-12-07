@@ -227,21 +227,21 @@ nav ul li a:hover {
 /* plane  */
 @keyframes movePlane {
   0% {
-    transform: translateX(-300px) translateY(-50%); /* Start far left */
-    opacity: 0; /* Initially invisible */
+    transform: translateX(-300px) translateY(-50%);  
+    opacity: 0;  
   }
   100% {
-    transform: translateX(220px) translateY(-50%); /* Move to original position */
-    opacity: 1; /* Fully visible */
+    transform: translateX(220px) translateY(-50%);  
+    opacity: 1;  
   }
 }
 
 .plane {
   position: absolute;
   top: 35%;
-  left: 220px; /* Start position, final position */
+  left: 220px; 
   z-index: 1000;
-  animation: movePlane 2s ease-out forwards; /* Animation applied */
+  animation: movePlane 2s ease-out forwards; 
 }
 
 .plane img {
@@ -303,10 +303,201 @@ nav ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  .girl {
+    position: absolute; 
+    top: 12%;  
+    left: 10%; 
+    z-index: 1000;  
+  }
+  
+  .girl img {
+    width: 85%;  
+    height: auto;  
+  }
+  
+  .box {
+    background-color: rgba(227, 190, 27, 0.632);  
+    border: 1px solid black; 
+    height: 25%;
+    width: 55%;  
+    margin: 20px auto;  
+    border-radius: 8px; 
+    font-size: 1.2em;  
+    text-align: justify;  
+    color: black;
+    margin-top: 10px;  
+    padding-right: 40px;
+    padding-left: 20px;
+    position: absolute;  
+    left: 28%; 
+    top: 20%;  
+  }
+ 
+  .sqad{
+    position: absolute;
+    top:40%;
+    right:  15%;
+    z-index: 1000;
+  
+  }
+   .sqad img{
+    width: 280px ;
+    height: auto;
+   }
+  
+  .info{
+    position: absolute;
+    top: 55% ;
+    justify-content: center;
+    z-index: 1000;
+  }
+  .info img {
+    width: 70%;
+    height: auto;
+  }
+
+  /* Container for the box */
+.box-container {
+   position: absolute;
+   top: 65%;
+   left: 20%;
+   z-index: 1000;
+}
+
+
+.box-containerr {
+  position: absolute;
+  top: 65%;
+  right: 20%;
+  z-index: 1000;
+}
+
+
+.black-box {
+  background-color: rgba(0, 0, 0, 0.463);  
+  color: rgb(227, 191, 27); 
+  padding: 20px;
+  border-radius: 10px;  
+  width: 250px; 
+  text-align: center; 
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+  top: 60%;
+  left: 20%;
+  z-index: 1000;
+}
+
+/* Make it responsive */
+@media (max-width: 768px) {
+  .black-box {
+    width: 80%; 
+  }
+}
+
+@media (max-width: 480px) {
+  .black-box {
+    width: 90%;  
+  }
+}
+
+.black-box2 {
+  background-color: rgba(0, 0, 0, 0.463);  
+  color: rgb(227, 191, 27);  
+  padding: 20px;
+  border-radius: 10px;  
+  width: 250px;  
+  text-align: center;  
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+  top: 60%;
+  left: 20%;
+  z-index: 1000;
+}
+
+/* Make it responsive */
+@media (max-width: 768px) {
+  .black-box {
+    width: 80%;  
+  }
+}
+
+@media (max-width: 480px) {
+  .black-box {
+    width: 90%;  
+  }
+}
 }
 
 #section3 {
   background-image: url('desktop3.jpg');
+
+  .gamers {
+    position: absolute;
+    top: 35%;
+    left: 120px;
+    z-index: 1000;
+    width: 40%;
+ }
+
+  .gamers img {
+    width: 60%;
+    height: auto;
+  }
+ 
+  .danger {
+    position: fixed; 
+        
+    bottom: 78%;
+    width: 20%; 
+    right: 80%;
+    z-index: 1000;    
+  }
+  
+  .danger img {
+     max-width: 100%; 
+    height: auto;    
+  }
+
+  .battel {
+    position: fixed;   
+    top: 40%;         
+    left: 40%;      
+    transform: translateY(-50%);   
+    z-index: 1000;      
+   
+  }
+  
+  .battel img {
+    max-width: 80%;      
+    height: auto;       
+  }
+  
+  .box {
+    background-color: rgba(0, 0, 0, 0.348); /* Transparent black background */
+    border: 2px solid rgb(255, 255, 255); /* Black border around the box */
+    padding: 10px; /* Add some padding around the text */
+    width: 40%; /* Adjust the width of the box */
+    border-radius: 8px; /* Optional: Rounded corners */
+    text-align: center; /* Centers the text inside the box */
+    color: rgb(251, 255, 24); /* Make the text white for better contrast */
+    font-size: 1.2em; /* Adjust font size */
+    position: absolute; /* Positioning the box */
+    top: 60%; /* Shift the box lower */
+    left: 70%; /* Shift the box to the right */
+    transform: translate(-50%, -50%); /* Ensure it remains centered relative to its new position */
+  }
+  
+    
+    
+  
+  
+  p {
+    margin: 0; /* Remove default margin */
+  }
+  
 }
 
 #section4 {
