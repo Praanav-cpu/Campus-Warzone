@@ -252,29 +252,36 @@ nav ul li a:hover {
 }
 }
 /* plane  */
-@keyframes movePlane {
-  0% {
-    transform: translateX(-300px) translateY(-50%); /* Start far left */
-    opacity: 0; /* Initially invisible */
-  }
-  100% {
-    transform: translateX(220px) translateY(-50%); /* Move to original position */
-    opacity: 1; /* Fully visible */
-  }
-}
 
+/* Plane Styling */
+/* Plane Styling */
 .plane {
-  position: absolute;
-  top: 35%;
-  left: 220px; /* Start position, final position */
-  z-index: 1000;
-  animation: movePlane 2s ease-out forwards; /* Animation applied */
-}
-
-.plane img {
-  width: 180px;
-  height: auto;
-}
+    position: relative;
+    width: 100%;
+    height: 80%;
+    top: 30%;
+  }
+  
+  .plane {
+    position: absolute;
+    left: -250px; /* Start the image off-screen on the left */
+    animation: slideIn 2s ease-out forwards;
+    width: 150px; /* Adjust image size as needed */
+    animation-delay: 1s;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      left: -200px; /* Start off-screen */
+    }
+    100% {
+      left: 200px; /* Stop at the center (or any specific position) */
+       }
+  }
+  .plane img{
+    width: 220px;
+    height: auto;
+  }
 
 .para{
     position: relative;
@@ -282,39 +289,39 @@ nav ul li a:hover {
     height: 100%;
   }
   
-  .para {
-    right: 7%;
+  .para  {
+    right:7%;
     position: absolute;
-    top: -200px; /* Start the image off-screen at the top */
-    animation: slideDown 2s ease-out forwards; /* Run animation */
-    width: 150px; /* Adjust image size */
+    top: -200px;  
+    animation: slideDown 2s ease-out forwards;  
+    width:  60px;  
   }
   
   @keyframes slideDown {
     0% {
-      top: -200px; /* Start position off-screen */
+      top: -200px;  
     }
     100% {
-      top: 40%; /* Stop at the vertical center of the screen */
-      transform: translateY(-50%); /* Adjust to perfectly center the image */
+      top: 90%;  
+      transform: translateY(-50%);  
     }
   }
        
   .para img {
-    max-width: 200px;         
+    max-width: 100%;         
     height: auto;             
     display: block;           
     margin: 10px;               
   }
   .pp img {
-    max-width: 200px;
+    max-width: 120px;
     height: auto;
     display: block;
     margin: 10px;  
   }
 .pp{
     position: absolute;
-    left: 7%;
+    left: 20%;
     animation: floaty 4s ease infinite;
   }
   
@@ -353,13 +360,13 @@ nav ul li a:hover {
 
 .ppp{
     position: absolute;
-    top: 20%;
-    right: 10%;
+    top: 15%;
+    right: 23%;
     width: fit-content;
     animation: floaty 6s ease infinite;
   }
   .ppp img {
-    max-width: 350px;         
+    max-width: 160px;         
     height: auto;             
     display: block;           
     margin: 10px;               
@@ -448,7 +455,7 @@ nav ul li a:hover {
 
 
 .black-box {
-  background-color: rgba(0, 0, 0, 0.463);  
+  background-color: rgba(0, 0, 0, 0.686);  
   color: rgb(227, 191, 27); 
   padding: 20px;
   border-radius: 10px;  
@@ -476,7 +483,7 @@ nav ul li a:hover {
 }
 
 .black-box2 {
-  background-color: rgba(0, 0, 0, 0.463);  
+  background-color: rgba(0, 0, 0, 0.686);  
   color: rgb(227, 191, 27);  
   padding: 20px;
   border-radius: 10px;  
