@@ -1,194 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WARZONE</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;500;600;700&family=Work+Sans:wght@600&display=swap"
-      rel="stylesheet">
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- Font Awesome CDN for Icons -->
- 
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> CAMPUS-WARZONE</title>
+  <link rel="stylesheet" href="war.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
 </head>
 <body>
-  <!-- Background Song -->
-  <audio id="background-music" loop>
-    <source src="new world era.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-
-  <div id="loader">    
-    <div class="text-container">
-      <svg class="text-stroke" viewBox="0 0 900 100" width="80%" height="100%">
-        <text class="text1" x="10%" y="45%">CAMPUS WARZONE</text>
-        <text class="text2" x="25%" y="110">GHR SPECIAL</text>
-      </svg>
-    </div>
-  </div>
-
-  <div class="logo">
-    <img src="redblood.png" alt="">
-  </div>
-
-  <div class="logo2">
-    <img src="ghriet.webp" alt="">
-  </div>
-
-  <div class="logo3">
-    <img src="BGMI.png" alt="">
-  </div>
-
-  <div class="plane">
-    <img src="plane.png" alt="">
-  </div>
-
-  <div class="parashut">
-    <img src="parashut.png" alt="">
-  </div>
-
-  <div class="girl">
-    <img src="girl.png" alt="">
-  </div>
-
-  <!-- Navbar -->
-  <nav class="navbar">
+  <nav>
     <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#schedule">Schedule</a></li>
-        <li><a href="#about-us">About Us</a></li>
-        <li><a href="#leader">Leader</a></li>
+      <li><a href="#section1">Home</a></li>
+      <li><a href="#section2">About Us</a></li>
+      <li><a href="#section3">Schedule</a></li>
+      <li><a href="#section4">Prize</a></li>
+      <li><a href="#section5">Leaders</a></li>
+      <li><a href="#section6">Register</a></li>
+      <!-- Mute/Unmute Icon -->
+      <li><button id="muteUnmuteBtn" aria-label="Mute/Unmute Sound">
+        <span id="icon">&#128266;</span> <!-- Initial icon (speaker) -->
+      </button></li>
     </ul>
-    <!-- Mute/Unmute Button -->
-    <button id="mute-toggle" class="mute-button">🔊</button>
   </nav>
-
-  <!-- Home Section -->
-  <section id="home">
-    <div class="heading">
-      <h1>GH RAISONI INSTITUTE OF ENGINEERING AND TECHNOLOGY</h1>
-    </div>
-
-    <div class="subhead">
-      <h2>Organized by BCA Department</h2>
-    </div>
-
-    <div class="slogan">
-      <center> <h5>ENJOY GAMES WITH</h5> </center>
-    </div>
-
-    <div class="IMG2">
-      <img src="mainlogo.png" alt="">
-    </div>
-  </section>
-
-  <!-- About Us Section -->
-  <section id="about-us">
-      
-     
-      <div class="about">
-          <img src="about us .png" alt="About Us">
-      </div>
-      <div class="para">
-          <p>
-              Gear up for the ultimate BGMI showdown at our college! Test your gaming prowess, 
-              strategize with your squad, and compete for amazing prizes in an action-packed battle royal event. 
-              Whether you’re a seasoned pro or a budding gamer, this competition promises intense excitement and unforgettable moments. 
-              Gather your squad, register now, and claim your shot at glory!
-          </p>
-          
-      </div>
-     
-      </div>
-      
-      <div class="tou">
-        <h1><b>Tournament Info</b></h1>
-      </div>
-      <div class="line-container">
-        <div class="horizontal-line"></div>
-        <div class="vertical-line-container">
-          <span class="group group-a">GROUP  'A' </span>
-          <span class="time time-a"> Time : 10 am - 1:15 pm</span>
-          <span class="match m-a">  map  :</span>
-
-                                           <span class="MM MM-a">   1) Erangel <br>
-                                                                     2) Miramar <br>
-                                                                     3) shanok </span>                             
-
-
-          <span class="group group-b">GROUP  'B' </span> 
-          <span class="time time-b"> Time : 1:30 pm - 4:45 pm</span> 
-          <span class="match m-b">  map  : </span> 
-
-                                           <span class="MM MM-b">   1) Erangel <br>
-                                                                     2) Miramar <br>
-                                                                     3) shanok </span>    
-          <div class="vertical-line"></div>
-         
-        </div>
-      </div>
-      
-      
-  </div> 
-  </div>
   
+  <section id="section1" class="landing">
+    <div class="heading">
+      <h1>GH RAISONI INSTITUTE OF ENGINEERING , NAGPUR</h1>
+    </div>
+    <div class="subhead">
+      <h2>Organized By BCA Department</h2>
+    </div>
+        <div class="logo">
+          <img src="mainlogo.png" alt="">
+        </div>
+          <div class="logo2">
+            <img src="smoke.png" alt="">
+          </div>
+            <div class="logo3">
+              <img src="ghriet.webp" alt="">
+            </div>
+            <div class="logo4">
+              <img src="BGMI.png" alt="">
+            </div>
+
+            <div class="plane">
+              <img src="plane.png" alt="">
+            </div>
+  </section>
+  
+  
+  <audio id="soundEffect" src="new world era.mp3" preload="auto"></audio> 
+  
+
+   
+
+  
+  <section id="section2" class="page">
+     
   </section>
 
-  <!-- Schedule Section -->
-  <!-- <section id="schedule">
-    <div class="schedule-content">
-      <h2>Schedule</h2>
-      <p>Our event will be held over two days, packed with exciting matches and activities. Stay tuned for the detailed schedule!</p>
-    </div>
-  </section> -->
+  <section id="section3" class="page">
+     
+  </section>
 
 
-  <!--Warzone leaders-->
-  <section id="leader"> <div class="container">
-    <div class="blur-box box-1">
-        <img src="ayush.jpg" alt="Image 1" class="centered-image">
-        <h1>Organizer</h1>
-             <p>This box has a blurred transparent background and a centered image.</p>
-             <div class="social-icons">
-                   <a href="https://www.instagram.com/yourusername" target="_blank" class="instagram">
-                     <i class="fab fa-instagram"></i>
-                 </a>
-                <a href="https://www.linkedin.com/in/yourusername" target="_blank" class="linkedin">
-                     <i class="fab fa-linkedin"></i>
-                 </a>
-             </div>
-         </div>
-    <div class="blur-box box-2">
-        <img src="pranav.jpg" alt="Image 2" class="centered-image">
-        <h1>Organizer </h1>
-        <p>This box has a blurred transparent background and a centered image.</p>
-             <div class="social-icons">
-                   <a href="https://www.instagram.com/yourusername" target="_blank" class="instagram">
-                     <i class="fab fa-instagram"></i>
-                 </a>
-                <a href="https://www.linkedin.com/in/yourusername" target="_blank" class="linkedin">
-                     <i class="fab fa-linkedin"></i>
-                 </a>
-             </div>
-        </div>
-    <div class="blur-box box-3">
-        <img src="" alt="Image 3" class="centered-image">
-        <h1>Organizer </h1>
-        <p>This box has a blurred transparent background and a centered image.</p>
-             <div class="social-icons">
-                   <a href="https://www.instagram.com/yourusername" target="_blank" class="instagram">
-                     <i class="fab fa-instagram"></i>
-                 </a>
-                <a href="https://www.linkedin.com/in/yourusername" target="_blank" class="linkedin">
-                     <i class="fab fa-linkedin"></i>
-                 </a>
-             </div>
-          </div>
-</div></section>
-</body>
+  <section id="section4" class="page">
+     
+    
+  </section>
+
+ 
+  <section id="section5" class="page">
+    
+     
+  </section>
+
   <script src="script.js"></script>
 </body>
 </html>
-
-
-

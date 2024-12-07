@@ -1,30 +1,43 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const backgroundMusic = document.getElementById("background-music");
-    const muteToggle = document.getElementById("mute-toggle");
-    const loader = document.querySelector("#loader");
+const muteUnmuteBtn = document.getElementById('muteUnmuteBtn');
+const soundEffect = document.getElementById('soundEffect');
+const icon = document.getElementById('icon');
+let isMuted = false;
 
-    // Wait for a user interaction to play audio
-    document.body.addEventListener("click", () => {
-        backgroundMusic.play().catch(error => {
-            console.log("Autoplay :");
-        });
-    }, { once: true });
-
-    // Mute/Unmute functionality
-    muteToggle.addEventListener("click", () => {
-        if (backgroundMusic.muted) {
-            backgroundMusic.muted = false;
-            muteToggle.textContent = "🔊"; // Unmuted icon
-        } else {
-            backgroundMusic.muted = true;
-            muteToggle.textContent = "🔇"; // Muted icon
-        }
-    });
-
-    // Loader animation
-    setTimeout(() => {
-        loader.style.top = "-100%"; // Hides the loader after 4.2 seconds
-    }, 4200);
+muteUnmuteBtn.addEventListener('click', () => {
+  if (isMuted) {
+    soundEffect.muted = false;
+    icon.textContent = '🔊'; // Speaker icon
+    muteUnmuteBtn.setAttribute('aria-label', 'Mute Sound');
+    soundEffect.play();
+    isMuted = false;
+  } else {
+    soundEffect.muted = true;
+    icon.textContent = '🔇'; // Muted speaker icon
+    muteUnmuteBtn.setAttribute('aria-label', 'Unmute Sound');
+    isMuted = true;
+  }
 });
+
  
-  
+gsap.utils.toArray('.page').forEach((section, i) => {
+  gsap.fromTo(section, 
+    { opacity: 0, scale: 0.8 }, 
+    { 
+      opacity: 1, scale: 1, 
+      duration: 1.5, 
+      ease: 'power4.out',
+      scrollTrigger: {
+        trigger: section,
+        start: 'top 75%',
+        toggleActions: "restart none none none" 
+        
+      }
+    }
+  );
+});
+
+ 
+
+
+
+ 
