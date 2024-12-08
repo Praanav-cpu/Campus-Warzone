@@ -322,9 +322,18 @@ nav ul li a:hover {
 .pp{
     position: absolute;
     left: 20%;
-    animation: floaty 4s ease infinite;
+    animation:upIn 3s ease-out,  floaty 4s ease infinite;
   }
-  
+  @keyframes upIn {
+    0%{
+      top: -200px;
+      left :-30px
+    }
+    100% {
+      top:310px;  
+      transform: translateY(-45%);  
+    }
+  }
   @keyframes floatx {
     0%,
     100% {
@@ -363,7 +372,7 @@ nav ul li a:hover {
     top: 15%;
     right: 23%;
     width: fit-content;
-    animation: floaty 6s ease infinite;
+    animation: comeIn 3s ease-out, floaty 6s ease infinite;
   }
   .ppp img {
     max-width: 160px;         
@@ -371,7 +380,15 @@ nav ul li a:hover {
     display: block;           
     margin: 10px;               
   }
-  
+  @keyframes comeIn {
+    0%{
+      top: -200px;
+    }
+    100% {
+      top:15%;  
+      transform: translateY(-45%);  
+    }
+  }
 
 #section2 {
   background-image: url("About.png");
