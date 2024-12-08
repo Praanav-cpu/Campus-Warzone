@@ -1,7 +1,7 @@
 body, html {
   margin: 0;
   padding: 0;
-  font-family: cursive, sans-serif;
+  font-family: jaro;
   background-color: #000;
   color: #fff;
   overflow-x: hidden;
@@ -322,9 +322,18 @@ nav ul li a:hover {
 .pp{
     position: absolute;
     left: 20%;
-    animation: floaty 4s ease infinite;
+    animation:upIn 3s ease-out,  floaty 4s ease infinite;
   }
-  
+  @keyframes upIn {
+    0%{
+      top: -200px;
+      left :-30px
+    }
+    100% {
+      top:310px;  
+      transform: translateY(-45%);  
+    }
+  }
   @keyframes floatx {
     0%,
     100% {
@@ -363,7 +372,7 @@ nav ul li a:hover {
     top: 15%;
     right: 23%;
     width: fit-content;
-    animation: floaty 6s ease infinite;
+    animation: comeIn 3s ease-out, floaty 6s ease infinite;
   }
   .ppp img {
     max-width: 160px;         
@@ -371,7 +380,15 @@ nav ul li a:hover {
     display: block;           
     margin: 10px;               
   }
-  
+  @keyframes comeIn {
+    0%{
+      top: -200px;
+    }
+    100% {
+      top:15%;  
+      transform: translateY(-45%);  
+    }
+  }
 
 #section2 {
   background-image: url("About.png");
@@ -387,7 +404,7 @@ nav ul li a:hover {
   .girl {
     position: absolute; 
     top: 12%;  
-    left: 10%; 
+    left: 2%; 
     z-index: 1000;  
   }
   
@@ -399,18 +416,20 @@ nav ul li a:hover {
   .box {
     background-color: rgba(227, 190, 27, 0.632);  
     border: 1px solid black; 
+    font-family: jaro ;
+    font-weight: 600;
     height: 25%;
     width: 55%;  
     margin: 20px auto;  
     border-radius: 8px; 
-    font-size: 1.2em;  
+    font-size: 1.4em;  
     text-align: justify;  
     color: black;
     margin-top: 10px;  
     padding-right: 40px;
     padding-left: 20px;
     position: absolute;  
-    left: 28%; 
+    left: 19%; 
     top: 20%;  
   }
  
@@ -422,7 +441,7 @@ nav ul li a:hover {
   
   }
    .sqad img{
-    width: 280px ;
+    width: 320px ;
     height: auto;
    }
   
