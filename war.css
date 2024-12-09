@@ -132,9 +132,9 @@ nav ul li a:hover {
       font-size: 1.2em;
     }
     .heading {
-      margin-top: 5px;
+      margin-top: 15px;
     }
-  }
+  } 
   
   /* Center the logo div and image */
   .logo{
@@ -673,7 +673,7 @@ animation-delay: 1s;
   background-position: center;
   background-repeat: no-repeat;
   width: 100vw;
-  height: 60vh;
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
