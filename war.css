@@ -10,13 +10,13 @@ body, html {
 nav {
   position: fixed;
   top: 0;
-  width: 50%;  
-  left: 50%;   
-  transform: translateX(-50%);  
-  background: rgba(0, 0, 0, 0.212); 
-  padding: 1em; 
+  width: 50%; /* Sets the width of the navbar */
+  left: 50%; /* Moves the navbar to the center */
+  transform: translateX(-50%); /* Adjusts the navbar to be exactly centered */
+  background: rgba(0, 0, 0, 0.212); /* Transparent background */
+  padding: 1em;
   z-index: 1000;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);  
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Optional shadow */
 }
 
 nav ul {
@@ -103,7 +103,7 @@ nav ul li a:hover {
   
   h1, h2 {
     font-family: Arial, sans-serif;
-    color: #fff;  
+    color: #fff; /* Set color to white to be visible on black background */
     margin: 30px;
   }
   
@@ -293,18 +293,34 @@ animation-delay: 1s;
   .plane {
     position: absolute;
     left: -250px; /* Start the image off-screen on the left */
-    animation: slideIn 2s ease-out forwards;
+    animation: sideIn 2s ease-out forwards;
     width: 150px; /* Adjust image size as needed */
     animation-delay: 1s;
   }
   
   @keyframes sideIn {
     0% {
-      left: -200px;  
+      left: -200px; /* Start off-screen */
     }
     100% {
       left: 200px; /* Stop at the center (or any specific position) */
        }
+  }
+  @keyframes slideIn {
+    0% {
+      left: -200px; /* Start off-screen */
+    }
+    100% {
+      left: 50px; /* Stop at the center (or any specific position) */
+       }
+  }
+  @keyframes rightIn {
+    0%{
+      right:-200px;
+    }
+    100%{
+      right:200px;
+    }
   }
   .plane img{
     width: 220px;
@@ -625,7 +641,7 @@ animation-delay: 1s;
     height: auto;       
   }
   
-  .box {
+  .box2 {
     background-color: rgba(0, 0, 0, 0.348); /* Transparent black background */
     border: 2px solid rgb(255, 255, 255); /* Black border around the box */
     padding: 10px; /* Add some padding around the text */
@@ -639,9 +655,13 @@ animation-delay: 1s;
     left: 70%; /* Shift the box to the right */
     transform: translate(-50%, -50%); /* Ensure it remains centered relative to its new position */
   }
- 
+  
+    
+    
+  
+  
   p {
-    margin: 0;  
+    margin: 0; /* Remove default margin */
   }
   
 
@@ -655,16 +675,4 @@ animation-delay: 1s;
   background-image: url("Desktop - 2.png");
 }
 
-
-#section6 {
-  background-image: url("Desktop - 2.png");
-}
-
-
-#section7 {
-  background-image: url("Desktop - 2.png");
-}
-
-#section8  {
-  background-image: url("Desktop - 2.png");
-}
+ 
