@@ -40,4 +40,38 @@ gsap.utils.toArray('.page').forEach((section, i) => {
 
 
 
+
+
+
+// volunteers
+
+
+document.querySelectorAll('.image-card').forEach(card => {
+  card.addEventListener('click', function() {
+    // Flip the card
+    this.classList.toggle('flip');
+
+    // Redirect to the social media link when the icons are clicked
+    const instaLink = this.getAttribute('data-insta');
+    const linkedinLink = this.getAttribute('data-linkedin');
+
+    const instagramIcon = this.querySelector('.instagram-icon');
+    const linkedinIcon = this.querySelector('.linkedin-icon');
+
+    instagramIcon.href = instaLink;
+    linkedinIcon.href = linkedinLink;
+  });
+});
+
+
+// footer
+
+document.getElementById('scroll-top').addEventListener('click', function (e) {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
  
