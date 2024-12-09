@@ -702,9 +702,9 @@ animation-delay: 1s;
 
 .Dou{
   position: absolute;
-  top: 74%;
+  top: 80%;
   width: 20%; 
-  right: 0;
+  right: 10%;
   z-index: 1000;
 }
 
