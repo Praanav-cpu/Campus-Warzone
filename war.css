@@ -465,33 +465,25 @@ animation-delay: 1s;
     top: 20%;  
   }
   .girl {
+    
     position: absolute; 
     top: 12%;  
     left: -600px; 
     z-index: 1000;  
-    animation: slideIn 2s ease-out forwards;
-    animation-delay: 3s;
+    transition: left 2s ease-out;
+    
+}
+
+.girl.scrolled {
+  left: 30px; 
+}
+  .sqad{ position: absolute; 
+    right: -200%;
+     transition: right 2s ease-out;
+     
   }
-  @keyframes slideIn {
-    0% {
-      left: -200px; /* Start off-screen */
-    }
-    100% {
-      left: 50px; /* Stop at the center (or any specific position) */
-       }
-  }
-  
-  .girl img {
-    width: 85%;  
-    height: auto;  
-  }
-  .sqad{
-    position: absolute;
-    top:40%;
-    right:  -200px;
-    z-index: 1000;
-  animation: rightIn 2s ease-in forwards;
-  animation-delay: 3s;
+  .sqad.scrolled{
+    right: 150px;
   }
   
  
@@ -596,7 +588,7 @@ animation-delay: 1s;
     z-index: 1000;
     width: 40%;
     animation: animeAfterLoad 0.6s cubic-bezier(0.3, 0.8, 1, 1.05) both;
-    animation-delay: 2s;
+    animation-delay: 6s;
   }
   
   @keyframes animeAfterLoad {

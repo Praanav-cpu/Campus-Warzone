@@ -75,3 +75,23 @@ document.getElementById('scroll-top').addEventListener('click', function (e) {
 });
 
  
+window.addEventListener('scroll', function() {
+  const image = document.querySelector('.girl');
+  const rect = image.getBoundingClientRect();
+  if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+      image.classList.add('scrolled');
+  } else {
+      image.classList.remove('scrolled');
+  }
+});
+window.addEventListener('scroll', function() {
+  const image = document.querySelector('.sqad');
+  const rect = image.getBoundingClientRect();
+  if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+      image.classList.add('scrolled');
+  } else {
+      image.classList.remove('scrolled');
+  }
+});
+
+
