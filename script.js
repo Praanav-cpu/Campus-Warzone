@@ -35,45 +35,13 @@ gsap.utils.toArray('.page').forEach((section, i) => {
     }
   );
 });
-
+ 
+ 
  
 
 
-
-
-
-
-// volunteers
-
-
-document.querySelectorAll('.image-card').forEach(card => {
-  card.addEventListener('click', function() {
-    // Flip the card
-    this.classList.toggle('flip');
-
-    // Redirect to the social media link when the icons are clicked
-    const instaLink = this.getAttribute('data-insta');
-    const linkedinLink = this.getAttribute('data-linkedin');
-
-    const instagramIcon = this.querySelector('.instagram-icon');
-    const linkedinIcon = this.querySelector('.linkedin-icon');
-
-    instagramIcon.href = instaLink;
-    linkedinIcon.href = linkedinLink;
-  });
-});
-
-
-// footer
-
-document.getElementById('scroll-top').addEventListener('click', function (e) {
-  e.preventDefault();
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-});
-
+ // aboust us 
+ 
  
 window.addEventListener('scroll', function() {
   const image = document.querySelector('.girl');
@@ -94,4 +62,59 @@ window.addEventListener('scroll', function() {
   }
 });
 
+window.addEventListener('scroll', function () {
+  const image = document.querySelector('.info');
+  const rect = image.getBoundingClientRect();
+  if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+    image.classList.add('scrolled'); // Add the class when visible
+  } else {
+    image.classList.remove('scrolled'); // Remove the class when out of view
+  }
+});
 
+window.addEventListener('scroll', function () {
+  const boxes = document.querySelectorAll('.black-box, .black-box2');
+  boxes.forEach((box) => {
+    const rect = box.getBoundingClientRect();
+    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+      box.classList.add('scrolled'); // Add the class when visible
+    } else {
+      box.classList.remove('scrolled'); // Remove the class when out of view
+    }
+  });
+});
+
+// Section 3
+
+window.addEventListener('scroll', function() {
+  const gamersElement = document.querySelector('.gamers');
+  const rect = gamersElement.getBoundingClientRect();
+  if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+    gamersElement.classList.add('scrolled');
+  } else {
+    gamersElement.classList.remove('scrolled');
+  }
+});
+
+window.addEventListener('scroll', function() {
+  const battelElement = document.querySelector('.battel');
+  const rect = battelElement.getBoundingClientRect(); 
+  if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+    battelElement.classList.add('scrolled');
+  } else {
+    battelElement.classList.remove('scrolled');
+  }
+});
+
+
+
+
+// footer
+
+document.getElementById('scroll-top').addEventListener('click', function (e) {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});

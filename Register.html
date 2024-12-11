@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BGMI Tournament Registration</title>
+  <link rel="stylesheet" href="register.css">
+</head>
+<body>
+  <div class="container">
+    <h1>BGMI Tournament Registration</h1>
+    <form id="registrationForm" method="POST" action="/register">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="playerId">Player ID:</label>
+      <input type="text" id="playerId" name="playerId" placeholder="Enter your Player ID" required>
+
+      <label for="teamName">Team Name:</label>
+      <input type="text" id="teamName" name="teamName" placeholder="Enter your Team Name" required>
+
+      <h3>Scan QR Code to Pay</h3>
+      <div class="qr-code">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=PAYMENT_LINK" alt="QR Code">
+        <p>Pay ₹100 to complete registration.</p>
+      </div>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</body>
+</html>
