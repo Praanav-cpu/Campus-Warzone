@@ -3,12 +3,16 @@ const soundEffect = document.getElementById('soundEffect');
 const icon = document.getElementById('icon');
 let isMuted = false;
 
+// Ensure autoplay is enabled
+soundEffect.play().catch((error) => {
+  console.warn('Autoplay failed:', error);
+});
+
 muteUnmuteBtn.addEventListener('click', () => {
   if (isMuted) {
     soundEffect.muted = false;
     icon.textContent = '🔊'; // Speaker icon
     muteUnmuteBtn.setAttribute('aria-label', 'Mute Sound');
-    soundEffect.play();
     isMuted = false;
   } else {
     soundEffect.muted = true;
