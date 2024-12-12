@@ -122,3 +122,13 @@ document.getElementById('scroll-top').addEventListener('click', function (e) {
     behavior: 'smooth'
   });
 });
+
+
+
+function loaderAnimation() {
+  var loader = document.querySelector("#loader")
+  setTimeout(function () {
+      loader.style.top = "-100%"
+  }, 4200)
+}
+loaderAnimation()
