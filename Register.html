@@ -5,54 +5,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BGMI Tournament Registration</title>
   <link rel="stylesheet" href="register.css">
- 
 </head>
 <body>
-    <div class="container">
-        <div class="register">
-            <img src="register.png" alt="">
+  <div class="container">
+    <h1 class="form-title">Register Here</h1>
+    <div class="form-wrapper">
+      <!-- Left Side -->
+      <div class="left-form">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
         </div>
-      <form>
-          <div class="squad-member">
-              <h2>Squad Leader</h2>
-              <div class="form-group">
-                  <label for="leader-name">Name:</label>
-                  <input type="text" id="leader-name" name="leader-name" required>
-              </div>
-              <div class="form-group">
-                  <label for="leader-in-game-name">Player-UID:</label>
-                  <input type="text" id="leader-in-game-name" name="leader-in-game-name" required>
-              </div>
-              <div class="form-group">
-                  <label for="leader-mobile-number">Mobile Number:</label>
-                  <input type="tel" id="leader-mobile-number" name="leader-mobile-number" required>
-              </div>
-              <div class="form-group">
-                  <label for="squad-name">E-Mail:</label>
-                  <input type="text" id="squad-name" name="squad-name" required>
-              </div>
-          </div>
+        <div class="form-group">
+          <label for="mobile">Mobile Number:</label>
+          <input type="tel" id="mobile" name="mobile" required>
+        </div>
+        <div class="form-group">
+          <label for="team-name">Team Name:</label>
+          <input type="text" id="team-name" name="team-name" required>
+        </div>
+      </div>
+
+      <!-- Right Side -->
+      <div class="right-form">
+        <div class="form-group">
+          <label for="player1-name">Player 1 Name:</label>
+          <input type="text" id="player1-name" name="player1-name" required>
+        </div>
+        <div class="form-group">
+          <label for="player2-name">Player 2 Name:</label>
+          <input type="text" id="player2-name" name="player2-name" required>
+        </div>
+        <div class="form-group">
+          <label for="player3-name">Player 3 Name:</label>
+          <input type="text" id="player3-name" name="player3-name" required>
+        </div>
+        <div class="form-group">
+          <label for="player4-name">Player 4 Name:</label>
+          <input type="text" id="player4-name" name="player4-name" required>
+        </div>
+      </div>
+    </div>
+    
+    <div class="form-group">
+        <input type="button" value="Register Now" onclick="showQRCode()">
+    </div>
+
+    <div class="qr-code" id="qrCode">
+        <h3>Scan QR Code to Pay</h3>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=PAYMENT_LINK" alt="QR Code">
+        <p>Pay ₹200 to complete registration.</p>
+    </div>
+
+    <div class="file-upload" id="fileUpload">
+        <h3>Upload Payment Confirmation</h3>
+        <label for="file-upload" class="custom-file-upload">
+            Choose File
+        </label>
+        <input type="file" id="file-upload" name="payment-confirmation" required>
+    </div>
+
   
-       
-          <div class="form-group">
-              <input type="button" value="Register Now" onclick="showQRCode()">
-          </div>
-  
-          <div class="qr-code" id="qrCode">
-              <h3>Scan QR Code to Pay</h3>
-              <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=PAYMENT_LINK" alt="QR Code">
-              <p>Pay ₹200 to complete registration.</p>
-          </div>
-  
-          <div class="file-upload" id="fileUpload">
-              <h3>Upload Payment Confirmation</h3>
-              <input type="file" name="payment-confirmation" required>
-          </div>
-  
-          <div class="form-group">
-              <input type="submit" value="Register">
-          </div>
-      </form>
+   
+    <div class="pay-now">
+      <button type="submit">Pay Now</button>
     </div>
   
     <script>
