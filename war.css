@@ -902,6 +902,7 @@ animation-delay: 4.2s;
 }
 
 .container {
+  position: absolute;
   display: flex;
   gap: 50px;
   flex-wrap: wrap;
@@ -1085,11 +1086,228 @@ h1{
   }
 }
  
+.support{
+  position: fixed; 
+  bottom:22%;
+  width: 25%; 
+  left: 0;
+  z-index: 1000
+}
 
- 
+.support img{
+  max-width: 100%; 
+  height: auto;
+}
+.marquee {
+  width: 70%;
+  margin: 0;
+  --duration: 25s;
+  --gap: 4rem; /* gap between items */
+  display: flex;
+  overflow: hidden;
 
+  user-select: none;
+  gap: var(--gap); /* spacing between items in the marquee */
+  mask-image: linear-gradient(to right, transparent, black, black, black, black, black, black, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black, black, black, black, black, black, transparent);
+}
 
- 
+.marquee__group {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: var(--gap); /* ensures equal spacing between the images */
+  min-width: 100%;
+  min-height: 70px;
+  animation: scroll var(--duration) linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee__group {
+    animation-play-state: paused;
+  }
+}
+
+.marquee__group img {
+  width: 80px;
+  height: 80px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid rgb(243, 230, 243);
+  /* No extra margins or paddings for the images, just use the gap */
+}
+
+a {
+  cursor: pointer;
+}
+
+.marquee--reverse .marquee__group {
+  animation-direction: reverse;
+  animation-delay: calc(var(--duration) / -2);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+.marquee .marquee__group .links {
+  transition: all 0.1s ease-in;
+  border: 3px solid transparent;
+}
+
+.marquee .marquee__group .links:hover {
+  transform: scale(1.1) !important;
+  opacity: 0.9;
+  cursor: pointer;
+  border: 3px solid var(--primary-pink);
+}
+
+.marquee:hover .marquee__group {
+  animation-play-state: paused;
+}
+
+/* General layout for marquee boxes */
+.Core_Team {
+  position: absolute;
+  margin-top: 45%;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(66, 65, 63, 0.83);
+  border: 2px solid rgb(128, 125, 125);
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  align-items: center;
+  
+  min-height: 120px;
+  overflow: hidden; /* Hide anything outside the container */
+}
+
+/* Marquee container layout */
+.marquee {
+  width: 100%; /* Ensure it spans the full width of its parent container */
+  display: flex;
+  overflow: hidden; /* Hides images that scroll out of the container */
+  user-select: none;
+  mask-image: linear-gradient(to right, transparent, black, black, black, black, black, black, transparent); /* Smooth mask transition */
+  -webkit-mask-image: linear-gradient(to right, transparent, black, black, black, black, black, black, transparent);
+}
+
+.marquee__group {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-around;
+  gap: var(--gap);
+  animation: scroll var(--duration) linear infinite; /* Continuous scroll */
+}
+
+.marquee__group a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.marquee__group img {
+  width: 80px;
+  height: 80px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid rgb(243, 230, 243);
+}
+
+/* Animation for scrolling the images */
+@keyframes scroll {
+  0% {
+    transform: translateX(0); /* Start from the very left edge */
+  }
+  100% {
+    transform: translateX(-100%); /* Move fully out of the box */
+  }
+}
+
+/* Reverse scroll for the second box */
+.marquee--reverse .marquee__group {
+  animation-direction: reverse;
+}
+
+.marquee__group p {
+  margin-top: 5px;
+  text-align: center;
+}
+
+a {
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee__group {
+    animation-play-state: paused;
+  }
+}
+
+/* Responsive layout */
+@media only screen and (max-width: 768px) {
+  .Core_Team {
+    flex-direction: column;
+    padding-top: 1rem;
+  }
+  .Core_Team .marquee {
+    width: 100%;
+  }
+  .Text-area-core {
+    align-items: center;
+    padding: 1rem;
+    height: 50px;
+  }
+  .marquee {
+    gap: 1rem;
+  }
+  .marquee__group {
+    gap: 1rem;
+  }
+  .marquee__group img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .Core_Team {
+    flex-direction: column;
+    padding-top: 1rem;
+  }
+  .Core_Team .marquee {
+    width: 100%;
+  }
+  .Text-area-core {
+    align-items: center;
+    padding: 1rem;
+    height: 50px;
+  }
+  .marquee {
+    gap: 1rem;
+  }
+  .marquee__group {
+    gap: 1rem;
+  }
+  .marquee__group img {
+    width: 50px;
+    height: 50px;
+  }
+  .Core_Team_Hr {
+    display: block;
+  }
+}
+
 
 
 #section7 {
