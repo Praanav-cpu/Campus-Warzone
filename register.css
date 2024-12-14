@@ -140,7 +140,7 @@ body {
     border-radius: 5px;
 
 
-    
+
     background: rgba(51, 51, 51, 0.5);
     color: #fff;
     font-size: 1em;
@@ -159,7 +159,7 @@ body {
 }
 
 .file-upload input[type="file"]::file-selector-button:hover {
-    background: #ffnf00;
+    background: #ffnf000;
     color: #fff;
 }
 
