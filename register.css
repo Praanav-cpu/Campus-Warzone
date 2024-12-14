@@ -15,13 +15,13 @@ body {
   body::before {
     content: '';
     background: url(drop.png) no-repeat right bottom;
-    background-size: 60%; /* Adjust size as needed */
+    background-size: 40%;  
     position: absolute;
     bottom: 10px;
     right: 10px;
     width: 100%;
     height: 100%;
-         z-index: -10; /* Ensure it stays behind the container */
+         z-index: -10;  
 }
 
   .container {
@@ -117,9 +117,9 @@ body {
     border-radius: 5px;
     transition: background 0.3s;
     text-transform: uppercase;
-    width: 200px;  /* Adjust width here */
-    margin: 0 auto; /* Center button */
-    display: block; /* Ensure the button behaves as a block-level element */
+    width: 200px;  
+    margin: 0 auto;  
+    display: block;  
 }
 
  
@@ -134,10 +134,13 @@ body {
 }
 
 .file-upload input[type="file"] {
-    width: 100%;
+    width: 80%;
     padding: 15px;
     border: 2px dashed #ffbf00;
     border-radius: 5px;
+
+
+
     background: rgba(51, 51, 51, 0.5);
     color: #fff;
     font-size: 1em;
@@ -156,11 +159,11 @@ body {
 }
 
 .file-upload input[type="file"]::file-selector-button:hover {
-    background: #ff4b5c;
+    background: #ffnf000;
     color: #fff;
 }
 
 .file-upload input[type="file"]:hover {
     background: rgba(51, 51, 51, 0.7);
-    border-color: #ff4b5c;
+    border-color: #ffbf00;
 }
