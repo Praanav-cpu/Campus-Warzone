@@ -132,3 +132,4 @@ function loaderAnimation() {
   }, 4200)
 }
 loaderAnimation()
+
