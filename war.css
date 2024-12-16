@@ -1088,7 +1088,7 @@ h1{
  
 .support{
   position: fixed; 
-  bottom:22%;
+  bottom:20%;
   width: 25%; 
   left: 0;
   z-index: 1000
@@ -1176,10 +1176,10 @@ a {
 /* General layout for marquee boxes */
 .Core_Team {
   position: absolute;
-  margin-top: 45%;
+  margin-top: 50%;
   display: flex;
   justify-content: space-around;
-  background-color: rgba(66, 65, 63, 0.83);
+  background-color: rgba(0, 0, 0, 0.553);
   border: 2px solid rgb(128, 125, 125);
   width: 100%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
