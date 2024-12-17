@@ -159,7 +159,6 @@ body {
 }
 
 .file-upload input[type="file"]::file-selector-button:hover {
-    background: #ffnf000;
     color: #fff;
 }
 
