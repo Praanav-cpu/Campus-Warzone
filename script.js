@@ -1,26 +1,34 @@
-const muteUnmuteBtn = document.getElementById('muteUnmuteBtn');
-const soundEffect = document.getElementById('soundEffect');
-const icon = document.getElementById('icon');
-let isMuted = false;
+document.addEventListener('DOMContentLoaded', () => {
+  const muteUnmuteBtn = document.getElementById('muteUnmuteBtn');
+  const soundEffect = document.getElementById('soundEffect');
+  const icon = document.getElementById('icon');
+  let isMuted = false;
 
-// Ensure autoplay is enabled
-soundEffect.play().catch((error) => {
-  console.warn('Autoplay failed:', error);
+  // Attempt to play the sound once the page loads
+  soundEffect.play().then(() => {
+    console.log('Sound is playing automatically. true');
+  }).catch((error) => {
+    console.warn('Autoplay failed:', error);
+  });
+
+  muteUnmuteBtn.addEventListener('click', () => {
+    if (isMuted) {
+      soundEffect.muted = false;
+      soundEffect.play(); // Play the sound again if unmuted
+      icon.textContent = '🔊'; // Speaker icon
+      muteUnmuteBtn.setAttribute('aria-label', 'Mute Sound');
+      isMuted = false;
+    } else {
+      soundEffect.muted = true;
+      icon.textContent = '🔇'; // Muted speaker icon
+      muteUnmuteBtn.setAttribute('aria-label', 'Unmute Sound');
+      isMuted = true;
+    }
+  });
 });
 
-muteUnmuteBtn.addEventListener('click', () => {
-  if (isMuted) {
-    soundEffect.muted = false;
-    icon.textContent = '🔊'; // Speaker icon
-    muteUnmuteBtn.setAttribute('aria-label', 'Mute Sound');
-    isMuted = false;
-  } else {
-    soundEffect.muted = true;
-    icon.textContent = '🔇'; // Muted speaker icon
-    muteUnmuteBtn.setAttribute('aria-label', 'Unmute Sound');
-    isMuted = true;
-  }
-});
+
+
 
  
 gsap.utils.toArray('.page').forEach((section, i) => {
@@ -132,4 +140,3 @@ function loaderAnimation() {
   }, 4200)
 }
 loaderAnimation()
-

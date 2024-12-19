@@ -13,9 +13,10 @@ body, html {
   align-items: center;
   position: fixed;
   width: 100%; /* Adjusts for smaller screens */
+  height: 40px;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.6); /* Slightly darker background */
+  background: rgba(0, 0, 0, 0.805); /* Slightly darker background */
   padding: 1em;
   z-index: 1000;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
@@ -292,7 +293,7 @@ animation-delay: 4.2s;
 }
 .logo3 img {
 
-  max-width: 90px;            
+  max-width :80px; ;            
   height: auto;              
   display: block;            
   margin: 5px; 
@@ -334,7 +335,7 @@ animation-delay: 4.2s;
   z-index: 600;  
 }
 .logo4 img {
-  max-width: 160px;            
+  max-width: 140px;            
   height: auto;              
   display: block;            
   margin: 10px;  

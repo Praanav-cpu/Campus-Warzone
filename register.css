@@ -158,13 +158,6 @@ body {
     transition: background 0.3s;
 }
 
-.file-upload input[type="file"]::file-selector-button:hover {
-<<<<<<< HEAD
-    background: #ffbf00;
-=======
->>>>>>> 4744a275b9cf9a8be018ee431bf43b2824037fc5
-    color: #fff;
-}
 
 .file-upload input[type="file"]:hover {
     background: rgba(51, 51, 51, 0.7);
