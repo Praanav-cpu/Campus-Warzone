@@ -6,6 +6,71 @@ body, html {
   color: #fff;
   overflow-x: hidden;
 }
+#loader {
+  font-family:Arial, Helvetica, sans-serif;
+  transition: all 0.4s ease-in;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  z-index: 10000;
+  position: fixed;
+  overflow: hidden;
+  background: #141414;
+}
+
+.text-container {
+  display: flex;
+  justify-content: center;
+  block-size: min(17rem, 23vw);
+  min-inline-size: 22.5rem;
+}
+
+.text-stroke {
+  font-size: 70px;
+  letter-spacing: 4px;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-dasharray: 100%;
+  stroke-dashoffset: 100%;
+  animation: textStrokeAnim 4000ms linear both;
+  animation-iteration-count: 1;
+}
+
+@keyframes textStrokeAnim {
+  0% {
+    stroke-dasharray: 100%;
+    stroke-dashoffset: 100%;
+    fill: #0000;
+  }
+  95% {
+    stroke-dasharray: 0%;
+    stroke-dashoffset: 95%;
+    fill: #0000;
+  }
+  100% {
+    stroke-dasharray: 0%;
+    stroke-dashoffset: 0%;
+    fill: #f1f1f1;
+    filter: drop-shadow(2px 2px 10px #a4a2ad);
+  }
+  
+}
+#loader{
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    transition: all ease 0.7s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
 
 /* Navbar Styling */
 .nav1 {
@@ -84,6 +149,24 @@ nav ul li a:hover::after {
   color: #fff;
   transform: scale(1.2); /* Slightly enlarges on hover */
 }
+
+.btn {
+  text-decoration: none;
+  position: relative;
+  background-image: linear-gradient(to right bottom, #d2ac25 , #333);
+  color: hsla(0, 0%, 100%, 1);
+  max-width: max-content;
+  min-width: 180px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  padding-inline: 30px;
+ overflow: hidden;
+  clip-path: polygon(0% 0%, 90% 0, 100% 30%, 100% 100%, 0 100%);
+  animation:animeAfterLoada 2s cubic-bezier(0.3, 0.8, 1, 1.05) both ;
+  animation-delay: 4.2s;
+}
+
 
 /* Optional icon styles */
 #icon {
@@ -1390,8 +1473,7 @@ footer {
 }
 
 .social-icon:hover {
-  color: #f39c12;
-  transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 .scroll-top {
@@ -1442,87 +1524,4 @@ footer {
 }
 
 
-
-#loader {
-  font-family:Arial, Helvetica, sans-serif;
-  transition: all 0.4s ease-in;
-  opacity: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  width: 100%;
-  z-index: 10000;
-  position: fixed;
-  overflow: hidden;
-  background: #141414;
-}
-
-.text-container {
-  display: flex;
-  justify-content: center;
-  block-size: min(17rem, 23vw);
-  min-inline-size: 22.5rem;
-}
-
-.text-stroke {
-  font-size: 70px;
-  letter-spacing: 4px;
-  fill: none;
-  stroke: #fff;
-  stroke-width: 2;
-  stroke-dasharray: 100%;
-  stroke-dashoffset: 100%;
-  animation: textStrokeAnim 4000ms linear both;
-  animation-iteration-count: 1;
-}
-
-@keyframes textStrokeAnim {
-  0% {
-    stroke-dasharray: 100%;
-    stroke-dashoffset: 100%;
-    fill: #0000;
-  }
-  95% {
-    stroke-dasharray: 0%;
-    stroke-dashoffset: 95%;
-    fill: #0000;
-  }
-  100% {
-    stroke-dasharray: 0%;
-    stroke-dashoffset: 0%;
-    fill: #f1f1f1;
-    filter: drop-shadow(2px 2px 10px #a4a2ad);
-  }
-  
-}
-#loader{
-    height: 100%;
-    width: 100%;
-    background-color: #000;
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    transition: all ease 0.7s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} 
-
-.btn {
-  text-decoration: none;
-  position: relative;
-  background-image: linear-gradient(to right bottom, #d2ac25 , #333);
-  color: hsla(0, 0%, 100%, 1);
-  max-width: max-content;
-  min-width: 180px;
-  height: 50px;
-  display: grid;
-  place-items: center;
-  padding-inline: 30px;
- overflow: hidden;
-  clip-path: polygon(0% 0%, 90% 0, 100% 30%, 100% 100%, 0 100%);
-  animation:animeAfterLoada 2s cubic-bezier(0.3, 0.8, 1, 1.05) both ;
-  animation-delay: 4.2s;
-}
 
