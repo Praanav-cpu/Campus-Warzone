@@ -23,6 +23,34 @@ body::before {
   height: 100%;
   z-index: -10;  
 }
+#loader {
+  font-family:Arial, Helvetica, sans-serif;
+  transition: all 0.4s ease-in;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  z-index: 10000;
+  position: fixed;
+  overflow: hidden;
+  background: #141414;
+}
+
+
+#loader{
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  transition: all ease 0.7s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
 
 .container {
   width: 70%;
@@ -198,4 +226,93 @@ body::before {
 .file-upload input[type="file"]:hover {
   background: rgba(51, 51, 51, 0.7);
   border-color: #ffbf00;
+}
+
+
+
+.preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text-wrapper {
+  display: flex;
+  font-size: 100px; /* Increased font size */
+  font-weight: bold;
+  text-transform: uppercase;
+  overflow: hidden;
+  margin-bottom: 40px; /* Space between texts */
+  width: 600px; /* Larger container */
+  justify-content: center;
+}
+
+.text {
+  display: flex;
+  color: transparent;
+  -webkit-text-stroke: 3pX white; /* Text stroke */
+}
+
+.text span {
+  display: inline-block;
+  position: relative;
+  opacity: 0;
+}
+
+.text .left {
+  animation: slideFromLeft 2s forwards;
+}
+
+.text .right {
+  animation: slideFromRight 2s forwards;
+}
+
+.text-bottom .up {
+  animation: slideFromBottom 2s forwards;
+}
+
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

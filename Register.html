@@ -5,11 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BGMI Tournament Registration</title>
   <link rel="stylesheet" href="register.css">
-</head>
+ </head>
 <body>
+  <div id="loader">
+    <div class="text-container">
+   
+  <div class="preloader">
+    <div class="text-wrapper">
+      <div class="text">
+        <span class="left">REGI</span>
+        <span class="right">STER</span>
+      </div>
+    </div>
 
-  
-  <div class="container">
+    <div class="text-wrapper">
+      <div class="text text-bottom">
+        <span class="up">YOUR</span>
+        <span class="up">TEAM</span>
+      </div>
+    </div>
+  </div>
+    </div>
+  </div>
+
+ 
     <h1 class="form-title">Register Here</h1>
     <div class="form-wrapper">
       <!-- Left Side -->
@@ -72,6 +91,13 @@
     </div>
   
     <script>
+      function loaderAnimation() {
+  var loader = document.querySelector("#loader")
+  setTimeout(function () {
+      loader.style.top = "-100%"
+  }, 2200)
+}
+loaderAnimation()
      let qrVisible = false;
 
 function toggleQRCode() {
@@ -79,7 +105,7 @@ function toggleQRCode() {
     document.getElementById('qrCode').style.display = qrVisible ? 'block' : 'none';
     document.getElementById('fileUpload').style.display = qrVisible ? 'block' : 'none';
 }
-    </script>
+   </script>
   </body>
   </html>
   
