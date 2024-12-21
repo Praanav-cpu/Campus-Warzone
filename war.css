@@ -261,7 +261,7 @@ nav ul li a:hover::after {
 }
 .heading img{
   width: 50%;
-  height: auto;
+  height: 25px;
  
 }
 .subhead {
@@ -274,7 +274,7 @@ nav ul li a:hover::after {
 }
 .subhead img{
   width: 40%;
-  height: auto;
+  height: 25px;
 }
 /* Fade-in animation */
 @keyframes fadeInUp {
