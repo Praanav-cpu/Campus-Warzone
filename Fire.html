@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>Firebase Form</title>
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <div class="box">
+            <div class="form">
+                <h2>Form</h2>
+                <form>
+                    <div class="inputbox">
+                        <input type="text" id="username" required>
+                        <span>Username</span>
+                    </div>
+                    <div class="inputbox">
+                        <input type="email" id="email" required>
+                        <span>E-mail</span>
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" id="phone" required>
+                        <span>Phone Number</span>
+                    </div>
+                    <input type="button" value="Submit" class="sub" id="submit">
+                </form>
+            </div>
+        </div>
+        <script type="module">
+            // Import the Firebase SDKs
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+            import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js";
+
+            // Firebase configuration
+            const firebaseConfig = {
+                apiKey: "AIzaSyB83UwEY4gGZqFCrUDKUeMY2wAXKFWwq2E",
+                authDomain: "campus-warzone.firebaseapp.com",
+                projectId: "campus-warzone",
+                storageBucket: "campus-warzone.appspot.com",
+                messagingSenderId: "628800031930",
+                appId: "1:628800031930:web:494fb6c0de6cc0e9a70683"
+            };
+
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+
+            // Get a reference to the database service
+            const db = getDatabase(app);
+
+            document.getElementById("submit").addEventListener("click", function (e) {
+                e.preventDefault();
+
+                const username = document.getElementById("username").value;
+                const email = document.getElementById("email").value;
+                const phone = document.getElementById("phone").value;
+
+                if (username && email && phone) {
+                    set(ref(db, "user/" + username), {
+                        username: username,
+                        email: email,
+                        phoneNumber: phone,
+                    })
+                        .then(() => {
+                            alert("Data submitted successfully!");
+                        })
+                        .catch((error) => {
+                            console.error("Error writing to database:", error);
+                            alert("Failed to submit data.");
+                        });
+                } else {
+                    alert("Please fill in all fields.");
+                }
+            });
+        </script>
+    </body>
+</html>
