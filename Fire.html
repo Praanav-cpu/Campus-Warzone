@@ -9,8 +9,8 @@
                 <h2>Form</h2>
                 <form>
                     <div class="inputbox">
-                        <input type="text" id="username" required>
-                        <span>Username</span>
+                        <input type="text" id="Team Name" required>
+                        <span>Team Name</span>
                     </div>
                     <div class="inputbox">
                         <input type="email" id="email" required>
@@ -19,6 +19,22 @@
                     <div class="inputbox">
                         <input type="text" id="phone" required>
                         <span>Phone Number</span>
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" id="phone" required>
+                        <span>Player -1</span>
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" id="phone" required>
+                        <span>Player-2</span>
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" id="phone" required>
+                        <span>Player-3</span>
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" id="phone" required>
+                        <span>Player-4</span>
                     </div>
                     <input type="button" value="Submit" class="sub" id="submit">
                 </form>
@@ -54,9 +70,14 @@
 
                 if (username && email && phone) {
                     set(ref(db, "user/" + username), {
-                        username: username,
+                        TeamName: username,
                         email: email,
                         phoneNumber: phone,
+                        player1 : player-1,
+                        player2 : player-2,
+                        player3 : player-3,
+                        player4 : player-4,
+
                     })
                         .then(() => {
                             alert("Data submitted successfully!");
