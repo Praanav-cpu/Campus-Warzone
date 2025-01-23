@@ -919,6 +919,32 @@ animation-delay: 4.2s;
   z-index: 1000;
 }
 
+.booster1{
+  position: absolute;
+  margin-right: 60%;
+}
+.booster1 img{
+  width:50% ;
+  height: 50%;
+  border-radius: 50%;
+
+}
+.caster1{
+  position: absolute;
+  margin-left: 20%;
+}
+.caster1 img{
+width:86% ;
+height: 60%;
+}
+.caster2{
+  position: absolute;
+  margin-left: 70%;
+}
+.caster2 img{
+width:86% ;
+height: 60%;
+}
 .Dou img{
  max-width: 100%; 
  height: auto;
