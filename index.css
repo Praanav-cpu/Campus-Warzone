@@ -919,17 +919,12 @@ animation-delay: 4.2s;
   z-index: 1000;
 }
 
-.booster1{
-  position: absolute;
+
+.container2 {
   margin-right: 60%;
+  position: absolute;
+  flex-wrap: wrap; 
 }
-.booster1 img{
-  width:50% ;
-  height: 50%;
-  border-radius: 50%;
-
-}
-
 
 .container1 {
   margin-left: 40%;
