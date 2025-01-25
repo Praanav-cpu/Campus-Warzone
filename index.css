@@ -919,6 +919,61 @@ animation-delay: 4.2s;
   z-index: 1000;
 }
 
+
+.container2 {
+  margin-right: 60%;
+  position: absolute;
+  flex-wrap: wrap; 
+}
+
+.container1 {
+  margin-left: 40%;
+  position: absolute;
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.blur-box1 {
+  width: 250px;
+  height: 350px;
+  padding: 20px;
+  top: 15%;  
+  background-color: rgba(0, 0, 0, 0.416);
+  backdrop-filter: invert(10px);
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  color: rgb(88, 88, 88);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;  
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blur-box1:hover {
+  transform: scale(1.05); /* Slightly enlarges the box */
+  background-color: rgba(0, 0, 0, 0.6); /* Darkens the background */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5); /* Increases shadow depth */
+}
+
+h1{
+  font-size: 20px;
+}
+
+.box-4 {
+  background-color: rgba(190, 196, 196, 0.3); 
+}
+
+.box-5 {
+  background-color: rgba(190, 196, 196, 0.3); 
+}
+
+
 .Dou img{
  max-width: 100%; 
  height: auto;
