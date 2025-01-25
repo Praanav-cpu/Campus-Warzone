@@ -897,54 +897,74 @@ animation-delay: 4.2s;
    
 }
  
-.booster{
+.booster {
   position: absolute;
   bottom: 78%;
   width: 25%; 
   left: 0;
   z-index: 1000;
-   
- 
 }
+
 .booster img {
- max-width: 100%; 
- height: auto;    
+  max-width: 100%;
+  height: auto;
+}
+ 
+.para-container {
+  text-align: center;
+  position: absolute;  
+  top: 25%; 
+  width: 90%;  
+  left: 5%;  
 }
 
-.Dou{
-  position: absolute;
-  top: 80%;
-  width: 20%; 
-  right: 10%;
-  z-index: 1000;
+/* The paragraph style inside a blurred, transparent box */
+.para-box {
+  background: rgba(0, 0, 0, 0.6); /* Transparent black background */
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px); /* Applies the blur effect */
+  max-width: 800px; /* Limits the width */
+  margin: 0 auto;
+  font-size: 1.2rem;
 }
 
-
-.container2 {
-  margin-right: 60%;
-  position: absolute;
-  flex-wrap: wrap; 
+/* Responsive text styling */
+@media (max-width: 768px) {
+  .para-box {
+    font-size: 1rem;
+    padding: 15px;
+  }
 }
 
-.container1 {
-  margin-left: 40%;
+@media (max-width: 480px) {
+  .para-box {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
+
+.bcontainer {
   position: absolute;
   display: flex;
-  gap: 50px;
+  gap: 150px;
+  top: 150%;  
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
-.blur-box1 {
+.blur-box {
   width: 250px;
   height: 350px;
   padding: 20px;
-  top: 15%;  
-  background-color: rgba(0, 0, 0, 0.416);
+  top: 35%;  
+  background-color: rgba(162, 16, 16, 0.416);
   backdrop-filter: invert(10px);
   border-radius: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  color: rgb(88, 88, 88);
+  box-shadow: 0 4px 6px rgb(135, 0, 0);
+  color: rgb(152, 15, 15);
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
@@ -955,7 +975,7 @@ animation-delay: 4.2s;
   transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.blur-box1:hover {
+.blur-box:hover {
   transform: scale(1.05); /* Slightly enlarges the box */
   background-color: rgba(0, 0, 0, 0.6); /* Darkens the background */
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5); /* Increases shadow depth */
@@ -965,19 +985,45 @@ h1{
   font-size: 20px;
 }
 
-.box-4 {
+.centered-image {
+  width: 180px;
+  height: 180px;
+  margin-top: 30px ;
+  object-fit: cover;
+  border-radius: 50%; 
+  margin-bottom: 15px;
+  border: 5px solid gold;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+
+.box-1 {
+  background-color: rgb(190, 190, 190); 
+}
+
+.box-2 {
   background-color: rgba(190, 196, 196, 0.3); 
 }
 
-.box-5 {
+.box-3 {
   background-color: rgba(190, 196, 196, 0.3); 
 }
 
 
-.Dou img{
- max-width: 100%; 
- height: auto;
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column; 
+      gap: 50px; 
+    }
+
+  .blur-box {
+      width: 90%; 
+      height: auto;
+  }
 }
+
+ 
 
 #section6 {
   margin: 0;
