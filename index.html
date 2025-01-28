@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaming Registration</title>
+  <style>
+    /* Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #1a202c, #2d3748);
+      overflow: hidden;
+      color: #fff;
+    }
+
+    /* Background Animation */
+    body::before {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      top: -50%;
+      left: -50%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent 70%);
+      animation: move-bg 10s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes move-bg {
+      0% {
+        transform: translate(0, 0) rotate(0deg);
+      }
+      100% {
+        transform: translate(50%, 50%) rotate(360deg);
+      }
+    }
+
+    /* Button Styling */
+    .register-btn {
+      background: linear-gradient(45deg, #ff416c, #ff4b2b);
+      border: none;
+      padding: 20px 50px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #fff;
+      text-transform: uppercase;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 8px 15px rgba(255, 75, 43, 0.3);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .register-btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(255, 75, 43, 0.5);
+    }
+
+    .register-btn:focus {
+      outline: none;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+
+    .register-btn::before {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
+      border-radius: 12px;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.2), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .register-btn:hover::before {
+      opacity: 1;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .register-btn {
+        font-size: 1.2rem;
+        padding: 15px 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="register-btn" onclick="redirectToForm()">Register Here</button>
+
+  <script>
+    // JavaScript Function to Redirect
+    function redirectToForm() {
+      window.location.href = "form.html"; // Replace 'form.html' with the actual registration form link
+    }
+  </script>
+</body>
+</html>
