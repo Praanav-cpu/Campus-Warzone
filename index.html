@@ -1,110 +1,332 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gaming Registration</title>
-  <style>
-    /* Base Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(135deg, #1a202c, #2d3748);
-      overflow: hidden;
-      color: #fff;
-    }
-
-    /* Background Animation */
-    body::before {
-      content: '';
-      position: absolute;
-      width: 200%;
-      height: 200%;
-      top: -50%;
-      left: -50%;
-      background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent 70%);
-      animation: move-bg 10s linear infinite;
-      z-index: -1;
-    }
-
-    @keyframes move-bg {
-      0% {
-        transform: translate(0, 0) rotate(0deg);
-      }
-      100% {
-        transform: translate(50%, 50%) rotate(360deg);
-      }
-    }
-
-    /* Button Styling */
-    .register-btn {
-      background: linear-gradient(45deg, #ff416c, #ff4b2b);
-      border: none;
-      padding: 20px 50px;
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #fff;
-      text-transform: uppercase;
-      border-radius: 10px;
-      cursor: pointer;
-      box-shadow: 0 8px 15px rgba(255, 75, 43, 0.3);
-      transition: all 0.3s ease;
-      position: relative;
-    }
-
-    .register-btn:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 30px rgba(255, 75, 43, 0.5);
-    }
-
-    .register-btn:focus {
-      outline: none;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-    }
-
-    .register-btn::before {
-      content: '';
-      position: absolute;
-      top: -5px;
-      left: -5px;
-      right: -5px;
-      bottom: -5px;
-      border-radius: 12px;
-      background: linear-gradient(90deg, rgba(255, 255, 255, 0.2), transparent);
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-
-    .register-btn:hover::before {
-      opacity: 1;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .register-btn {
-        font-size: 1.2rem;
-        padding: 15px 40px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAMPUS-WARZONE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="dummy.js" type="module" defer></script>
 </head>
 <body>
-  <button class="register-btn" onclick="redirectToForm()">Register Here</button>
+    <div id="game-overlay"></div>
+    <div id="cursor"></div>
+    <div id="loading-screen">
+        <div class="loader"></div>
+    </div>
+    <header>
+        <nav>
+            <div class="logo">CAMPUS WARZONE 2025</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#prizes">Prizes</a></li>   
+                <li><a href="#organizers">Organizers</a></li>
+                <li><a href="#volunteers">Volunteers</a></li>
+                <li><a href="fire.html">Register</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
 
-  <script>
-    // JavaScript Function to Redirect
-    function redirectToForm() {
-      window.location.href = "fire.html"; // Replace 'form.html' with the actual registration form link
-    }
-  </script>
+    <main>
+        <section id="home" class="hero">
+            <h1>BGMI Tournament 2025</h1>
+            <p>Join the ultimate battle royale showdown!</p>
+            <div id="countdown"></div>
+            <a href="Fire.html" class="cta-button">Register Now</a>
+        </section>
+
+        <section id="about">
+            <h2>About the Event</h2>
+            <p>Get ready for an adrenaline-pumping BGMI tournament where the best players compete for glory and amazing prizes!</p>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-users"></i>
+                    <h3>50 Teams</h3>
+                    <p>Compete against the best players from across the Campus</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Prizepool Upto 5,000</h3>
+                    <p>Win big with our massive prize pool</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-broadcast-tower"></i>
+                    <h3>Live Streaming</h3>
+                    <p>Watch the action live on YouTube </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="schedule">
+            <h2>Event Schedule</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Registration Opens</h3>
+                        <p>29 Feb, 2025</p>
+                        <p>12:00 AM IST</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Day-1</h3>
+                         <h4>Group 'A'</h4>
+                        <p> Feb 4, 2025 </p>
+                        <p>10:00 AM - 1:15 PM</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Day-1</h3>
+                        <h4>Group 'B'</h4>
+                        <p>Feb 4, 2025</p>
+                        <p>1:30 PM - 5:30 PM </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Grand Finals</h3>
+                        <p>Feb 5, 2025</p>
+                        <p>11:00 AM - 4:00 PM IST</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="prizes">
+            <h2>Prizes</h2>
+            <div class="prize-cards">
+                <div class="prize-card">
+                    <h3>1st Place</h3>
+                    <p class="prize-amount">₹2,500</p>
+                     
+                </div>
+                <div class="prize-card">
+                    <h3>2nd Place</h3>
+                    <p class="prize-amount">₹1,500</p>
+                     
+                </div>
+                <div class="prize-card">
+                    <h3>3rd Place</h3>
+                    <p class="prize-amount">₹1000</p>
+                     
+                </div>
+            </div>
+        </section>
+
+        <section id="sponsors">
+            <h2>Warzone Broadcaster & Caster</h2>
+            <div class="sponsor-logos">
+              <div class="organizer-card" style="display: flex; flex-direction: column; align-items: center; border: 2px solid #ddd; border-radius: 10px; padding: 20px; width: 250px; text-align: center; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                <img src="talk_with_viru.jpg" alt="John Doe" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
+               
+                  <h3 style="font-size: 18px; font-weight: 600; color: #ffffff; margin-bottom: 10px;">talk_with_viru</h3>
+                    <a href="https://www.instagram.com/talk.with.viru?igsh=MWo1NmRwMnV6czJrbQ==" target="_blank" style="text-decoration: none; font-size: 24px; color: #E1306C;">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://youtube.com/@virendra_makde?si=Ix2W1lmK_Ft4u7Iz" target="_blank" style="text-decoration: none; font-size: 24px; color: #FF0000;">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            
+
+            <div class="sponsor-logos">
+              <div class="organizer-card" style="display: flex; flex-direction: column; align-items: center; border: 2px solid #ddd; border-radius: 10px; padding: 20px; width: 250px; text-align: center; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                <img src="caster1.png" alt="Caster Harsh" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
+                <h3 style="font-size: 18px; font-weight: 600; color: #ffffff; margin-bottom: 10px;">Caster Harsh</h3>
+                <a href="https://www.instagram.com/caster_harsh?igsh=ZXBjMHozYTV3Z2Jn" target="_blank" style="text-decoration: none; font-size: 24px; color: #E1306C;">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            
+                
+            <div class="sponsor-logos" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 20px;">
+              <div class="organizer-card" style="display: flex; flex-direction: column; align-items: center; border: 2px solid #ddd; border-radius: 10px; padding: 20px; width: 250px; text-align: center; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                  <img src="caster2.png" alt="Caster Sneha" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
+                  <h3 style="font-size: 18px; font-weight: 600; color: #ffffff; margin-bottom: 10px;">Caster Sneha</h3>
+                  <a href="https://www.instagram.com/_sneha45_45?igsh=cGQzYmo4aXVuenZn" target="_blank" style="text-decoration: none; font-size: 24px; color: #E1306C;">
+                      <i class="fab fa-instagram"></i>
+                  </a>
+              </div>
+          </div>
+          
+
+                 
+            </div>
+        </section>
+
+        <!-- <section id="gallery">
+            <h2>Event Gallery</h2>
+            <div class="gallery-grid">
+                <img src="/placeholder.svg?height=300&width=400&text=BGMI+Action+1" alt="BGMI Action 1">
+                <img src="/placeholder.svg?height=300&width=400&text=BGMI+Action+2" alt="BGMI Action 2">
+                <img src="/placeholder.svg?height=300&width=400&text=BGMI+Action+3" alt="BGMI Action 3">
+                <img src="/placeholder.svg?height=300&width=400&text=BGMI+Action+4" alt="BGMI Action 4">
+                <img src="/placeholder.svg?height=300&width=400&text=BGMI+Action+5" alt="BGMI Action 5">
+                <img src="/placeholder.svg?height=300&width=400&text=BGMI+Action+6" alt="BGMI Action 6">
+            </div>
+        </section> -->
+
+        <section id="organizers">
+            <h2>Warzone Leader</h2>
+            <p>"Behind every great event lies a team of visionaries, strategists, and innovators. 
+              Meet the driving force behind Campus Warzone: GHR Special—the organizers who
+              turned an idea into an epic gaming phenomenon.
+              
+              From crafting strategies to ensuring seamless execution, these leaders are dedicated 
+              to delivering an unforgettable experience for gamers and spectators alike. Discover the faces behind the magic!"</p>
+            <div class="organizer-grid">
+              <div class="organizer-row" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; padding: 20px;">
+                <!-- Ayush Thakre -->
+                <div class="organizer-card" style="display: flex; flex-direction: column; align-items: center; border: 2px solid #ddd; border-radius: 10px; padding: 20px; width: 250px; text-align: center; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                    <img src="ayush.jpg" alt="Ayush Thakre" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
+                    <h3 style="font-size: 18px; font-weight: 600; color: #ff720d; margin-bottom: 5px;">Ayush Thakre</h3>
+                    <p style="font-size: 14px; color: #ffffff; margin: 0;">Organizer</p>
+                    <div style="display: flex; gap: 10px; margin-top: 10px;">
+                        <a href="https://www.linkedin.com/in/ayush-thakre-096558294?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" style="text-decoration: none;">
+                            <i class="fab fa-instagram" style="font-size: 30px; color: #ff720d;"></i>
+                        </a>
+                        <a href="" target="_blank" style="text-decoration: none;">
+                            <i class="fab fa-linkedin" style="font-size: 30px; color: #ff720d;"></i>
+                        </a>
+                    </div>
+                </div>
+            
+                <!-- Pranav Tekade -->
+                <div class="organizer-card" style="display: flex; flex-direction: column; align-items: center; border: 2px solid #ddd; border-radius: 10px; padding: 20px; width: 250px; text-align: center; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                    <img src="pranav.jpg" alt="Pranav Tekade" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
+                    <h3 style="font-size: 18px; font-weight: 600; color: #ff720d; margin-bottom: 5px;">Pranav Tekade</h3>
+                    <p style="font-size: 14px; color: #ffffff; margin: 0;">Organizer</p>
+                    <div style="display: flex; gap: 10px; margin-top: 10px;">
+                        <a href="https://www.instagram.com/aadityaa.18_?igsh=MTlxeG82b3d3Y2p1dw==" target="_blank" style="text-decoration: none;">
+                            <i class="fab fa-instagram" style="font-size: 30px; color: #ff720d;"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/pranav-tekade-57b5a2320?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" style="text-decoration: none;">
+                            <i class="fab fa-linkedin" style="font-size: 30px; color: #ff720d;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+              
+            <!-- <div class="organizer-card" style="display: flex; flex-direction: column; align-items: center; border: 2px solid #ddd; border-radius: 10px; padding: 20px; width: 250px; text-align: center; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+              <img src="pranav.jpg" alt="Pranav Tekade" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
+              <h3 style="font-size: 18px; font-weight: 600; color: #d51212; margin-bottom: 5px;">Pratiksh Borkar</h3>
+              <p style="font-size: 14px; color: #d51212; margin: 0;">Organizer</p>
+              <div style="display: flex; gap: 10px; margin-top: 10px;">
+                  <a href="https://www.instagram.com/pranav" target="_blank" style="text-decoration: none;">
+                      <i class="fab fa-instagram" style="font-size: 30px; color: #c82805;"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/pranav" target="_blank" style="text-decoration: none;">
+                      <i class="fab fa-linkedin" style="font-size: 30px; color: #c82805;"></i>
+                  </a>
+              </div>
+          </div> -->
+      </div>
+      
+            </div>
+        </section>
+
+        <section id="volunteers">
+            <h2>Warzone Volunteers</h2>
+            <p>We're grateful for the dedication and hard work of our amazing volunteers!</p>
+            <div class="volunteer-grid">
+              <div class="volunteer-card">
+                <img src="viru.jpg" alt="Volunteer 4">
+                <h3>Virendra Makde</h3>
+            </div>
+                <div class="volunteer-card">
+                    <img src="Pranav Atkar.jpg" alt="Volunteer 1">
+                    <h3>Pranav Atkar</h3>
+                </div>
+                <div class="volunteer-card">
+                    <img src="mohit - Mohit Talmale.jpg" alt="Volunteer 2">
+                    <h3>Mohit</h3>
+                </div>
+                <div class="volunteer-card">
+                    <img src="Om Dawle.jpg" alt="Volunteer 3">
+                    <h3>Om Dawle</h3>
+                </div>
+                <div class="volunteer-card">
+                    <img src="Mrunal Gaidhane.jpg" alt="Volunteer 4">
+                    <h3>Mrunal Gaidhane</h3>
+                </div>
+                <div class="volunteer-card">
+                  <img src="Omya.jpg" alt="Volunteer 4">
+                  <h3>Om Wankhade</h3>
+              </div>
+              <div class="volunteer-card">
+                <img src="sher.jpg" alt="Volunteer 4">
+                <h3>Prajwal Shymkuwar</h3>
+            </div>
+            <div class="volunteer-card">
+              <img src="Omkar Katore .jpg" alt="Volunteer 4">
+              <h3>Omkar Katore</h3>
+          </div>
+          <div class="volunteer-card">
+            <img src="Sumit Achare.jpg" alt="Volunteer 4">
+            <h3>Sumit Achare </h3>
+        </div>
+        <div class="volunteer-card">
+          <img src="Om bhendi.jpg" alt="Volunteer 4">
+          <h3>Om Bhendarkar</h3>
+      </div>
+      <div class="volunteer-card">
+        <img src="Harsh Kurve.jpg" alt="Volunteer 4">
+        <h3>Harsh Kurve</h3>
+    </div>
+    <div class="volunteer-card">
+      <img src="Karansingh Rajpurohit.jpg" alt="Volunteer 4">
+      <h3>Karan Singh Rajpurohit</h3>
+  </div>
+  <div class="volunteer-card">
+    <img src="tihan.jpg" alt="Volunteer ">
+    <h3>Tihan Khan</h3>
+    <h5>Technical Supporter</h5>
+</div>
+<!-- <div class="volunteer-card">
+  <img src="" alt="Volunteer 4">
+  <h3>Paritosh Bisen</h3>
+</div> -->
+
+            </div>
+            
+        </section>
+
+         
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <a href="mailto:campuswarzone13@gmail.com" style="text-decoration: none; color: #e0570e;">
+                  campuswarzone13@gmail.com
+              </a>
+                <p>Phone: 9890082643 , 8010188925 , 7057003830 </p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                     
+                    <a href="https://chat.whatsapp.com/C2gjshEkTPF8fN4wMTHEYA" target="_blank">
+                      <i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/campuswarzone/profilecard/?igsh=NHAycmlkajRwcXU=" target="_blank">
+                      <i class="fab fa-instagram"></i></a>
+                    <a href="https://discord.gg/4kPqfRDw" target="_blank"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">&copy; Campus Warzone GHR Special. All rights reserved.</p>
+    </footer>
 </body>
 </html>
