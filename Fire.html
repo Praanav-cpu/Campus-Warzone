@@ -369,6 +369,55 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--accent);
 }
+
+.footer {
+      width: 100%;
+      background-color: #2d3748;
+      padding: 20px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .footer h2 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .social-icons a {
+      text-decoration: none;
+      color: white;
+      font-size: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+      color: #ff416c; /* Hover color */
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+      .footer h2 {
+        font-size: 1.2rem;
+      }
+
+      .social-icons a {
+        font-size: 1.5rem;
+      }
+
+      .social-icons {
+        gap: 15px;
+      }
+    }
     </style>
 </head>
 <body>
@@ -424,28 +473,22 @@ html {
         </div>
     </div>
 
-    <div class="footer-container">
-        <div class="footer-left">
-          <h2>CAMPUS WARZONE GHR SPECIAL</h2>
-          <p>&copy; 2024 All Rights Reserved</p>
-        </div>
-        <div class="footer-right">
-          <div class="social-icons">
-            <a href="https://www.instagram.com/campuswarzone?igsh=eXY2YjRwMnRydTl6" target="_blank" class="social-icon instagram">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://discord.gg/4kPqfRDw" target="_blank" class="social-icon linkedin">
-              <i class="fa-brands fa-discord"></i>
-            </a>
-            <a href="https://chat.whatsapp.com/C2gjshEkTPF8fN4wMTHEYA" target="_blank" class="social-icon twitter">
-              <i class="fa-brands fa-whatsapp"></i>
-            </a>
-          </div>
-          <div class="scroll-top">
-            <a href="#top" id="scroll-top"><i class="fas fa-arrow-up"></i> Back to Top</a>
-          </div>
-        </div>
+    <footer class="footer">
+      <h2>Follow Campus Warzone</h2>
+      <div class="social-icons">
+        <a href="https://chat.whatsapp.com/C2gjshEkTPF8fN4wMTHEYA" target="_blank" title="Join us on WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://www.instagram.com/campuswarzone?igsh=eXY2YjRwMnRydTl6" target="_blank" title="Follow us on Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://discord.gg/4kPqfRDw" target="_blank" title="Join us on Discord">
+          <i class="fab fa-discord"></i>
+        </a>
       </div>
+    </footer>
+
+    
 
 
     <!-- Firebase App -->
