@@ -369,6 +369,72 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--accent);
 }
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-dark);
+  color: var(--text-primary);
+  padding: 20px;
+  border-top: 1px solid var(--border-color);
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-left h2 {
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+.footer-left p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: var(--accent);
+}
+
+.scroll-top a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.scroll-top a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-right {
+    align-items: center;
+  }
+}
+
     </style>
 </head>
 <body>
@@ -419,12 +485,33 @@ html {
                 Campus Warzone is not responsible for any loss, damage, or issues arising from the use of the platform.
                 By registering, you confirm that you agree to these terms. 
                 If you have questions, contact us at   
-                <ul>
-                    <a href="#">campuswarzone</a>
-                </ul>
+                 
             </p>
         </div>
     </div>
+
+    <div class="footer-container">
+        <div class="footer-left">
+          <h2>CAMPUS WARZONE GHR SPECIAL</h2>
+          <p>&copy; 2024 All Rights Reserved</p>
+        </div>
+        <div class="footer-right">
+          <div class="social-icons">
+            <a href="https://www.instagram.com/campuswarzone?igsh=eXY2YjRwMnRydTl6" target="_blank" class="social-icon instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://discord.gg/4kPqfRDw" target="_blank" class="social-icon linkedin">
+              <i class="fa-brands fa-discord"></i>
+            </a>
+            <a href="https://chat.whatsapp.com/C2gjshEkTPF8fN4wMTHEYA" target="_blank" class="social-icon twitter">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+          <div class="scroll-top">
+            <a href="#top" id="scroll-top"><i class="fas fa-arrow-up"></i> Back to Top</a>
+          </div>
+        </div>
+      </div>
 
 
     <!-- Firebase App -->
