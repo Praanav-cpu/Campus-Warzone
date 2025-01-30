@@ -206,7 +206,7 @@ section:hover {
 .hero {
     text-align: center;
     padding: 6rem 2rem;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/placeholder.svg?height=600&width=1200&text=BGMI+Tournament');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('desktop3.jpg');
     background-size: cover;
     background-position: center;
     color: var(--text-color);
@@ -248,6 +248,7 @@ section:hover {
     margin-top: 1rem;
     margin-bottom: 2rem;
     font-family: 'Orbitron', sans-serif;
+    
     color: var(--accent-color);
     position: relative;
     z-index: 2;
