@@ -116,6 +116,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
+    max-height: 50px;
     margin: 0 auto;
 }
 
@@ -464,6 +465,7 @@ h2 {
 }
 
 .organizer-grid,
+.faculty,
 .volunteer-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -472,6 +474,7 @@ h2 {
 }
 
 .organizer-card,
+.faculty-card,
 .volunteer-card {
     background-color: rgba(30, 30, 30, 0.8);
     padding: 1.5rem;
@@ -481,12 +484,14 @@ h2 {
 }
 
 .organizer-card:hover,
+.faculty-card:hover,
 .volunteer-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
 }
 
 .organizer-card img,
+.faculty-card img,
 .volunteer-card img {
     width: 150px;  /* Set the width of the image */
     height: 150px; /* Set the height of the image */
@@ -497,6 +502,7 @@ h2 {
 }
 
 .organizer-card h3,
+.faculty-card h3,
 .volunteer-card h3 {
     color: var(--primary-color);
     font-size: 1.2rem;
@@ -504,6 +510,10 @@ h2 {
 }
 
 .organizer-card p {
+    color: var(--secondary-color);
+}
+
+.faculty-card p {
     color: var(--secondary-color);
 }
 

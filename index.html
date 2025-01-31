@@ -16,8 +16,16 @@
     <div id="loading-screen">
         <div class="loader"></div>
     </div>
+    <audio id="background-music" loop>
+        <source src="new world era.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+   
     <header>
         <nav>
+            <button id="mute-button" class="mute-button">
+                <i class="fas fa-volume-up"></i>
+            </button>
             <div class="logo">CAMPUS WARZONE 2025</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
@@ -26,8 +34,10 @@
                 <li><a href="#prizes">Prizes</a></li>   
                 <li><a href="#organizers">Organizers</a></li>
                 <li><a href="#volunteers">Volunteers</a></li>
-                <li><a href="stay.html">Register</a></li>
+                 <span></span>
+              
             </ul>
+            
             
         </nav>
     </header>
@@ -38,7 +48,7 @@
                 ,NAGPUR 
 
             </h2>
-              <H3>CORDINATION WITH BCA AMRAVATI UNIVERSITY</H3>
+              <H3>PRESENTS</H3>
             <p>CAMPUS WARZONE: GHR Special</p>
             <div id="countdown"></div>
             <a href="stay.html" class="cta-button">Register Now</a>
@@ -130,12 +140,15 @@
                 <img src="talk_with_viru.jpg" alt="John Doe" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
                
                   <h3 style="font-size: 18px; font-weight: 600; color: #ffffff; margin-bottom: 10px;">talk_with_viru</h3>
+                  <div style="display: flex; gap: 10px; align-items: center;">
                     <a href="https://www.instagram.com/talk.with.viru?igsh=MWo1NmRwMnV6czJrbQ==" target="_blank" style="text-decoration: none; font-size: 24px; color: #E1306C;">
                         <i class="fab fa-instagram"></i>
                     </a>
                     <a href="https://youtube.com/@virendra_makde?si=Ix2W1lmK_Ft4u7Iz" target="_blank" style="text-decoration: none; font-size: 24px; color: #FF0000;">
                         <i class="fab fa-youtube"></i>
                     </a>
+                </div>
+                
                 </div>
             </div>
             
@@ -177,6 +190,8 @@
             </div>
         </section> -->
 
+        
+
         <section id="organizers">
             <h2>Warzone Leader</h2>
             <p>"Behind every great event lies a team of visionaries, strategists, and innovators. 
@@ -187,28 +202,12 @@
               to delivering an unforgettable experience for gamers and spectators alike. Discover the faces behind the magic!"</p>
             <div class="organizer-grid">
               <div class="organizer-row" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; padding: 20px;">
-                <!-- Ayush Thakre -->
                 <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                    <!-- Ayush Thakre -->
-                    <div class="organizer-card" style="display: flex; flex-direction: column; align-items: center; border: 2px solid #ddd; border-radius: 10px; padding: 20px; width: 250px; text-align: center; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                        <img src="ayush.jpg" alt="Ayush Thakre" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
-                        <h3 style="font-size: 18px; font-weight: 600; color: #ff720d; margin-bottom: 5px;">Ayush Thakre</h3>
-                        <p style="font-size: 14px; color: #ffffff; margin: 0;">Organizer</p>
-                        <div style="display: flex; gap: 10px; margin-top: 10px;">
-                            <a href="https://www.instagram.com/ayushthakre__?igsh=cGduOGl2eW1va21x" target="_blank" style="text-decoration: none;">
-                                <i class="fab fa-instagram" style="font-size: 30px; color: #ff720d;"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/ayush-thakre-096558294?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" style="text-decoration: none;">
-                                <i class="fab fa-linkedin" style="font-size: 30px; color: #ff720d;"></i>
-                            </a>
-                        </div>
-                    </div>
-                
                     <!-- Pranav Tekade -->
                     <div class="organizer-card" style="display: flex; flex-direction: column; align-items: center; border: 2px solid #ddd; border-radius: 10px; padding: 20px; width: 250px; text-align: center; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
                         <img src="pranav.jpg" alt="Pranav Tekade" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
                         <h3 style="font-size: 18px; font-weight: 600; color: #ff720d; margin-bottom: 5px;">Pranav Tekade</h3>
-                        <p style="font-size: 14px; color: #ffffff; margin: 0;">Organizer</p>
+                        <p style="font-size: 14px; color: #ffffff; margin: 0;">Tournament Director</p>
                         <div style="display: flex; gap: 10px; margin-top: 10px;">
                             <a href="https://www.instagram.com/aadityaa.18_?igsh=MTlxeG82b3d3Y2p1dw==" target="_blank" style="text-decoration: none;">
                                 <i class="fab fa-instagram" style="font-size: 30px; color: #ff720d;"></i>
@@ -223,7 +222,7 @@
                     <div class="organizer-card" style="display: flex; flex-direction: column; align-items: center; border: 2px solid #ddd; border-radius: 10px; padding: 20px; width: 250px; text-align: center; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
                         <img src="Pratiksh.jpg" alt="Pratiksh Borkar" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
                         <h3 style="font-size: 18px; font-weight: 600; color: #ff720d; margin-bottom: 5px;">Pratiksh Borkar</h3>
-                        <p style="font-size: 14px; color: #ffffff; margin: 0;">Organizer</p>
+                        <p style="font-size: 14px; color: #ffffff; margin: 0;">Operations Manager </p>
                         <div style="display: flex; gap: 10px; margin-top: 10px;">
                             <a href="https://www.instagram.com/borkarpratiksh?igsh=MXRpaDhnMHpzbXcyeg==" target="_blank" style="text-decoration: none;">
                                 <i class="fab fa-instagram" style="font-size: 30px; color: #ff720d;"></i>
@@ -235,6 +234,75 @@
                     </div>
                 </div>
                 
+                 <!-- Ayush Thakre -->
+                     <div class="organizer-card" style="display: flex; flex-direction: column; align-items: center; border: 2px solid #ddd; border-radius: 10px; padding: 20px; width: 250px; text-align: center; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                        <img src="ayush.jpg" alt="Ayush Thakre" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
+                        <h3 style="font-size: 18px; font-weight: 600; color: #ff720d; margin-bottom: 5px;">Ayush Thakre</h3>
+                        <p style="font-size: 14px; color: #ffffff; margin: 0;">Game Admins</p>
+                        <div style="display: flex; gap: 10px; margin-top: 10px;">
+                            <a href="https://www.instagram.com/ayushthakre__?igsh=cGduOGl2eW1va21x" target="_blank" style="text-decoration: none;">
+                                <i class="fab fa-instagram" style="font-size: 30px; color: #ff720d;"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/ayush-thakre-096558294?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" style="text-decoration: none;">
+                                <i class="fab fa-linkedin" style="font-size: 30px; color: #ff720d;"></i>
+                            </a>
+                        </div>
+                    </div> 
+
+                     <!-- virendra makde  -->
+                     <div class="organizer-card" style="display: flex; flex-direction: column; align-items: center; border: 2px solid #ddd; border-radius: 10px; padding: 20px; width: 250px; text-align: center; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                        <img src="viru.jpg" alt="Ayush Thakre" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
+                        <h3 style="font-size: 18px; font-weight: 600; color: #ff720d; margin-bottom: 5px;">Virendra Makde </h3>
+                        <p style="font-size: 14px; color: #ffffff; margin: 0;">Casting & Broadcasting </p>
+                        <div style="display: flex; gap: 10px; margin-top: 10px;">
+                            <a href="https://www.instagram.com/mr.viru.14?igsh=MTQ2eGV6bHRnZWhp" target="_blank" style="text-decoration: none;">
+                                <i class="fab fa-instagram" style="font-size: 30px; color: #ff720d;"></i>
+                            </a>
+                            
+                        </div>
+                    </div> 
+
+                                         <!-- Mohit Talmale  -->
+                                         <div class="organizer-card" style="display: flex; flex-direction: column; align-items: center; border: 2px solid #ddd; border-radius: 10px; padding: 20px; width: 250px; text-align: center; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                                            <img src="mohit - Mohit Talmale.jpg" alt="Ayush Thakre" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
+                                            <h3 style="font-size: 18px; font-weight: 600; color: #ff720d; margin-bottom: 5px;">Mohit Talmale </h3>
+                                            <p style="font-size: 14px; color: #ffffff; margin: 0;">Registration & Player Coordination </p>
+                                            <div style="display: flex; gap: 10px; margin-top: 10px;">
+                                                <a href="https://www.instagram.com/mohit_007_?igsh=N2M4MGU1OHl1dDBu" target="_blank" style="text-decoration: none;">
+                                                    <i class="fab fa-instagram" style="font-size: 30px; color: #ff720d;"></i>
+                                                </a>
+                                                 
+                                            </div>
+                                        </div> 
+
+                                        <!--Sher  -->
+                                        <div class="organizer-card" style="display: flex; flex-direction: column; align-items: center; border: 2px solid #ddd; border-radius: 10px; padding: 20px; width: 250px; text-align: center; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                                            <img src="sher.jpg" alt="Ayush Thakre" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
+                                            <h3 style="font-size: 18px; font-weight: 600; color: #ff720d; margin-bottom: 5px;">Prajwal Shamkuwar </h3>
+                                            <p style="font-size: 14px; color: #ffffff; margin: 0;"> Technical Support </p>
+                                            <div style="display: flex; gap: 10px; margin-top: 10px;">
+                                                <a href="https://www.instagram.com/as_wasthere?igsh=djc1MmxvZ3cxeXVk " target="_blank" style="text-decoration: none;">
+                                                    <i class="fab fa-instagram" style="font-size: 30px; color: #ff720d;"></i>
+                                                </a>
+                                                 
+                                            </div>
+                                        </div> 
+
+                                        <!--Om Dawale  -->
+
+                                        <div class="organizer-card" style="display: flex; flex-direction: column; align-items: center; border: 2px solid #ddd; border-radius: 10px; padding: 20px; width: 250px; text-align: center; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                                            <img src="Om Dawle.jpg" alt="Ayush Thakre" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
+                                            <h3 style="font-size: 18px; font-weight: 600; color: #ff720d; margin-bottom: 5px;">Om Dawale </h3>
+                                            <p style="font-size: 14px; color: #ffffff; margin: 0;"> Social </p>
+                                            <div style="display: flex; gap: 10px; margin-top: 10px;">
+                                                <a href="https://www.instagram.com/as_wasthere?igsh=djc1MmxvZ3cxeXVk " target="_blank" style="text-decoration: none;">
+                                                    <i class="fab fa-instagram" style="font-size: 30px; color: #ff720d;"></i>
+                                                </a>
+                                                 
+                                            </div>
+                                        </div> 
+
+                    
       </div>
       
             </div>
@@ -244,22 +312,13 @@
             <h2>Warzone Volunteers</h2>
             <p>We're grateful for the dedication and hard work of our amazing volunteers!</p>
             <div class="volunteer-grid">
-              <div class="volunteer-card">
-                <img src="viru.jpg" alt="Volunteer 4">
-                <h3>Virendra Makde</h3>
-            </div>
+               
                 <div class="volunteer-card">
                     <img src="Pranav Atkar.jpg" alt="Volunteer 1">
                     <h3>Pranav Atkar</h3>
                 </div>
-                <div class="volunteer-card">
-                    <img src="mohit - Mohit Talmale.jpg" alt="Volunteer 2">
-                    <h3>Mohit</h3>
-                </div>
-                <div class="volunteer-card">
-                    <img src="Om Dawle.jpg" alt="Volunteer 3">
-                    <h3>Om Dawle</h3>
-                </div>
+                 
+                
                 <div class="volunteer-card">
                     <img src="Mrunal Gaidhane.jpg" alt="Volunteer 4">
                     <h3>Mrunal Gaidhane</h3>
@@ -268,10 +327,7 @@
                   <img src="Omya.jpg" alt="Volunteer 4">
                   <h3>Om Wankhade</h3>
               </div>
-              <div class="volunteer-card">
-                <img src="sher.jpg" alt="Volunteer 4">
-                <h3>Prajwal Shamkuwar</h3>
-            </div>
+               
             <div class="volunteer-card">
 
               <img src="Omkar Katore .jpg" alt="Volunteer 4">
@@ -332,5 +388,6 @@
         </div>
         <p class="copyright">&copy; Campus Warzone GHR Special. All rights reserved.</p>
     </footer>
+    <script src="sound-control.js"></script>
 </body>
 </html>
