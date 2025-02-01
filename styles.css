@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap");
 
 :root {
     --primary-color: #ff6b35;
@@ -150,7 +150,138 @@ nav {
 .nav-links a:hover {
     color: var(--primary-color);
 }
-
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-img {
+    width: 90px;
+    height: 60px;
+    margin-right: 10px;
+  }
+  
+  .logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+  
+  .nav-links li {
+    margin-left: 1rem;
+  }
+  
+  .nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+  
+  .nav-links a:hover {
+    color: var(--primary-color);
+  }
+  
+  .mute-button {
+    background-color: transparent;
+    color: var(--text-color);
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin-left: 1rem;
+  }
+  
+  .mute-button:hover {
+    color: var(--primary-color);
+  }
+  
+  .mute-button.muted {
+    color: var(--primary-color);
+  }
+  
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .nav-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 2px 0;
+    transition: 0.4s;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .nav-toggle {
+      display: flex;
+    }
+  
+    .nav-links {
+      position: fixed;
+      right: -100%;
+      top: 70px;
+      flex-direction: column;
+      background-color: rgba(10, 10, 10, 0.9);
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+  
+    .nav-links.active {
+      right: 0;
+    }
+  
+    .nav-links li {
+      margin: 2.5rem 0;
+    }
+  
+    .nav-links a {
+      font-size: 1.1rem;
+    }
+  
+    .mute-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: rgba(255, 107, 53, 0.8);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 0;
+    }
+  
+    .mute-button:hover {
+      background-color: rgba(255, 107, 53, 1);
+    }
+  
+    .logo-text {
+      font-size: 1.2rem;
+    }
+  }
 .burger {
     display: none;
     cursor: pointer;
