@@ -198,6 +198,49 @@ nav {
   .nav-links a:hover {
     color: var(--primary-color);
   }
+  @media screen and (max-width: 768px) {
+    .nav-links {
+        position: fixed; /* Use fixed positioning to ensure it stays on top */
+        right: 0;
+        height: 100vh;
+        top: 70px; /* Adjust based on your header height */
+        background-color: rgba(20, 20, 20, 0.95); /* Slightly opaque background */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000; /* Ensure it's above other content */
+    }
+
+    .nav-links.nav-active {
+        transform: translateX(0);
+    }
+
+    .nav-links li {
+        margin: 2rem 0;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    /* Burger menu animation */
+    .burger.toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .burger.toggle .line2 {
+        opacity: 0;
+    }
+
+    .burger.toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+
   
   .mute-button {
     background-color: transparent;
@@ -282,6 +325,87 @@ nav {
       font-size: 1.2rem;
     }
   }
+  /* Default styles for larger screens */
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 1rem;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: fixed; /* Use fixed positioning to ensure it stays on top */
+        right: 0;
+        height: 100vh;
+        top: 70px; /* Adjust based on your header height */
+        background-color: rgba(20, 20, 20, 0.95); /* Slightly opaque background */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000; /* Ensure it's above other content */
+    }
+
+    .nav-links.nav-active {
+        transform: translateX(0);
+    }
+
+    .nav-links li {
+        margin: 2rem 0;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    /* Burger menu animation */
+    .burger.toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .burger.toggle .line2 {
+        opacity: 0;
+    }
+
+    .burger.toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+
 .burger {
     display: none;
     cursor: pointer;
@@ -739,32 +863,7 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-@media screen and (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-
-    .burger {
-        display: block;
-    }
-
-    .nav-active {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: absolute;
-        right: 0;
-        top: 70px;
-        background-color: rgba(10, 10, 10, 0.9);
-        width: 100%;
-        transform: translateX(100%);
-        transition: transform 0.5s ease-in;
-    }
-
-    .nav-active li {
-        opacity: 0;
-    }
-
+ 
     .timeline::after {
         left: 31px;
     }
@@ -793,7 +892,7 @@ footer {
     .footer-content {
         flex-direction: column;
     }
-}
+
 
 @media screen and (max-width: 480px) {
     .hero h1 {
