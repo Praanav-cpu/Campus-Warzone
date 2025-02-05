@@ -110,18 +110,27 @@ header {
     width: 100%;
     z-index: 1000;
 }
-
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
-    max-height: 50px;
     margin: 0 auto;
+    padding: 10px;
 }
 
-.logo {
-    font-family: 'Orbitron', sans-serif;
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 90px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+.logo-text {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--primary-color);
@@ -131,6 +140,7 @@ nav {
 .nav-links {
     display: flex;
     list-style: none;
+    margin-left: auto;
 }
 
 .nav-links li {
@@ -141,7 +151,6 @@ nav {
     color: var(--text-color);
     text-decoration: none;
     transition: color 0.3s ease;
-    font-family: 'Orbitron', sans-serif;
     text-transform: uppercase;
     font-size: 0.9rem;
     letter-spacing: 1px;
@@ -150,68 +159,48 @@ nav {
 .nav-links a:hover {
     color: var(--primary-color);
 }
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .logo-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo-img {
-    width: 90px;
-    height: 60px;
-    margin-right: 10px;
-  }
-  
-  .logo-text {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--primary-color);
-    text-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
-  }
-  
-  .nav-links {
-    display: flex;
-    list-style: none;
-    align-items: center;
-  }
-  
-  .nav-links li {
-    margin-left: 1rem;
-  }
-  
-  .nav-links a {
-    color: var(--text-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-  }
-  
-  .nav-links a:hover {
-    color: var(--primary-color);
-  }
-  @media screen and (max-width: 768px) {
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        padding: 5px 15px;
+    }
+
+    .logo-img {
+        width: 70px;
+        height: 45px;
+    }
+
+    .logo-text {
+        font-size: 1.2rem;
+    }
+
     .nav-links {
-        position: fixed; /* Use fixed positioning to ensure it stays on top */
+        position: fixed;
         right: 0;
         height: 100vh;
-        top: 70px; /* Adjust based on your header height */
-        background-color: rgba(20, 20, 20, 0.95); /* Slightly opaque background */
+        top: 70px;
+        background-color: rgba(20, 20, 20, 0.95);
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
         transform: translateX(100%);
         transition: transform 0.3s ease-in-out;
-        z-index: 1000; /* Ensure it's above other content */
+        z-index: 1000;
+        padding-top: 50px;
     }
 
     .nav-links.nav-active {
@@ -222,11 +211,14 @@ nav {
         margin: 2rem 0;
     }
 
+    .nav-links a {
+        font-size: 1.1rem;
+    }
+
     .burger {
         display: block;
     }
 
-    /* Burger menu animation */
     .burger.toggle .line1 {
         transform: rotate(-45deg) translate(-5px, 6px);
     }
@@ -240,69 +232,23 @@ nav {
     }
 }
 
-
-  
-  .mute-button {
-    background-color: transparent;
-    color: var(--text-color);
-    border: none;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: color 0.3s ease;
-    margin-left: 1rem;
-  }
-  
-  .mute-button:hover {
-    color: var(--primary-color);
-  }
-  
-  .mute-button.muted {
-    color: var(--primary-color);
-  }
-  
-  .nav-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-  }
-  
-  .nav-toggle span {
-    width: 25px;
-    height: 3px;
-    background-color: var(--text-color);
-    margin: 2px 0;
-    transition: 0.4s;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .nav-toggle {
-      display: flex;
-    }
-  
-    .nav-links {
+ .mute-button {
       position: fixed;
-      right: -100%;
-      top: 70px;
-      flex-direction: column;
-      background-color: rgba(10, 10, 10, 0.9);
-      width: 100%;
-      text-align: center;
-      transition: 0.3s;
-      box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+      bottom: 20px;
+      right: 20px;
+      background-color: rgba(255, 107, 53, 0.8);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 0;
     }
   
-    .nav-links.active {
-      right: 0;
+    .mute-button:hover {
+      background-color: rgba(255, 107, 53, 1);
     }
-  
-    .nav-links li {
-      margin: 2.5rem 0;
-    }
-  
-    .nav-links a {
-      font-size: 1.1rem;
-    }
-  
     .mute-button {
       position: fixed;
       bottom: 20px;
@@ -321,105 +267,7 @@ nav {
       background-color: rgba(255, 107, 53, 1);
     }
   
-    .logo-text {
-      font-size: 1.2rem;
-    }
-  }
-  /* Default styles for larger screens */
-.nav-links {
-    display: flex;
-    list-style: none;
-}
-
-.nav-links li {
-    margin-left: 1rem;
-}
-
-.nav-links a {
-    color: var(--text-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
-    font-family: 'Orbitron', sans-serif;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-}
-
-.nav-links a:hover {
-    color: var(--primary-color);
-}
-
-.burger {
-    display: none;
-    cursor: pointer;
-}
-
-.burger div {
-    width: 25px;
-    height: 3px;
-    background-color: var(--text-color);
-    margin: 5px;
-    transition: all 0.3s ease;
-}
-
-/* Responsive styles for smaller screens */
-@media screen and (max-width: 768px) {
-    .nav-links {
-        position: fixed; /* Use fixed positioning to ensure it stays on top */
-        right: 0;
-        height: 100vh;
-        top: 70px; /* Adjust based on your header height */
-        background-color: rgba(20, 20, 20, 0.95); /* Slightly opaque background */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in-out;
-        z-index: 1000; /* Ensure it's above other content */
-    }
-
-    .nav-links.nav-active {
-        transform: translateX(0);
-    }
-
-    .nav-links li {
-        margin: 2rem 0;
-    }
-
-    .burger {
-        display: block;
-    }
-
-    /* Burger menu animation */
-    .burger.toggle .line1 {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-
-    .burger.toggle .line2 {
-        opacity: 0;
-    }
-
-    .burger.toggle .line3 {
-        transform: rotate(45deg) translate(-5px, -6px);
-    }
-}
-
-
-.burger {
-    display: none;
-    cursor: pointer;
-}
-
-.burger div {
-    width: 25px;
-    height: 3px;
-    background-color: var(--text-color);
-    margin: 5px;
-    transition: all 0.3s ease;
-}
-
-main {
+   main {
     padding-top: 70px;
 }
 
